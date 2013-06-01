@@ -21,7 +21,12 @@ public class MutabilityTest {
     }
 
     @Test
-    public void testGetStrings() throws Exception {
-        Assert.assertNotNull(m);
+    public void testArray() throws Exception {
+        String[] arr = m.getArray();
+        m.getArray()[0] = "0";
+        Assert.assertNotNull(m.getArray());
+        Assert.assertEquals("0", arr[0]);
+        arr = null;
+        Assert.assertNotNull(m.getArray());
     }
 }

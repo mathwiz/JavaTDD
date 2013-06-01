@@ -1,5 +1,7 @@
 package tdd.collections;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Mutability {
@@ -8,6 +10,7 @@ public class Mutability {
 
     public Mutability(){
         array = new String[10];
+        list = new LinkedList<String>();
     }
 
     public static void main(String[] args) {
@@ -16,6 +19,10 @@ public class Mutability {
 
     public List<String> getList() {
         return list;
+    }
+
+    public List<String> getWrappedList() {
+        return new ArrayList<String>(list);
     }
 
     public void setList(List<String> list) {
