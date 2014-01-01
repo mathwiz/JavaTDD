@@ -26,7 +26,7 @@ public class MutabilityTest {
         m.getArray()[0] = "0";
         Assert.assertNotNull(m.getArray());
         Assert.assertEquals("0", arr[0]);
-        arr = null;
-        Assert.assertNotNull(m.getArray());
+        arr[0] = "zero";
+        Assert.assertEquals("zero", m.getArray()[0]);
     }
 }
