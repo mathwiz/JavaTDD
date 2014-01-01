@@ -18,4 +18,10 @@ public class EqualityTest {
         Assert.assertTrue("parent", data[0] instanceof GolfBall);
         Assert.assertTrue("subclass", data[3] instanceof GolfBall);
     }
+
+    @Test
+    public void testEquals() throws Exception {
+        GolfBall[] data = Equality.makeData();
+        Assert.assertEquals("same data", data[2], data[3]);
+    }
 }
