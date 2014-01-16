@@ -11,4 +11,12 @@ public class ManhattanPt extends PointD {
         this.x = x;
         this.y = y;
     }
+
+    @Override
+    public String toString() {
+        return "ManhattanPt{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
+    }
 }

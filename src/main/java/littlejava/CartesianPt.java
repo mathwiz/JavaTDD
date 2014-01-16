@@ -11,4 +11,12 @@ public class CartesianPt extends PointD {
         this.x = x;
         this.y = y;
     }
+
+    @Override
+    public String toString() {
+        return "CartesianPt{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
+    }
 }
