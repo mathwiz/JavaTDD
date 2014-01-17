@@ -16,12 +16,4 @@ public class OneMoreThan extends NumD {
                 "predecessor=" + predecessor +
                 '}';
     }
-
-    public static void main(String[] args) {
-        System.out.println(
-                new OneMoreThan(
-                        new OneMoreThan(
-                                new Zero()))
-        );
-    }
 }
