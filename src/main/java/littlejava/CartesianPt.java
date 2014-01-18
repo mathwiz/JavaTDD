@@ -27,6 +27,6 @@ public class CartesianPt extends PointD {
 
     @Override
     public int distanceTo(PointD point) {
-        return (int)Math.sqrt(x*point.x + y*point.y);
+        return (int)Math.sqrt(Math.pow(x-point.x, 2) + Math.pow(y-point.y, 2));
     }
 }

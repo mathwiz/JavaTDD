@@ -26,4 +26,11 @@ public abstract class PointD {
     public abstract int distanceToO();
 
     public abstract int distanceTo(PointD point);
+
+    public static void main(String[] args) {
+        PointD pt = new CartesianPt(3,4);
+        System.out.println(pt + " distance to origin " + pt.distanceToO());
+        pt = new CartesianPt(5,5);
+        System.out.println(pt + " distance to origin " + pt.distanceToO());
+    }
 }
