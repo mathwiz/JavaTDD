@@ -2,7 +2,6 @@ package tdd.json;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import tdd.model.GolfBall;
 
 import java.util.List;
 
