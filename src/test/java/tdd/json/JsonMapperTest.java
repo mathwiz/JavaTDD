@@ -29,22 +29,23 @@ public class JsonMapperTest {
         });
     }
 
-    String json;
-
     @Before
     public void setUp() throws Exception {
-        InputStream in = this.getClass().getClassLoader().getResourceAsStream("example.json");
-        Scanner s = new Scanner(in).useDelimiter("\\A");
-        json = s.next();
     }
 
     @Test
     public void testDeserialize() throws Exception {
+        InputStream in = this.getClass().getClassLoader().getResourceAsStream("example.json");
+        Scanner s = new Scanner(in).useDelimiter("\\A");
+        String json = s.next();
+        JsonMapper<GolfBall> mapper = new JsonMapper();
+        List<GolfBall> list = mapper.deserialize(json);
+        System.out.println(list);
     }
 
     @Test
     public void testSerialize() throws Exception {
-        JsonMapper mapper = new JsonMapper();
+        JsonMapper<GolfBall> mapper = new JsonMapper();
         List<GolfBall> list = makeData();
         String s = mapper.serialize(list);
         System.out.println(s);
