@@ -22,4 +22,8 @@ public abstract class PointD {
     public void setX(int x) {
         this.x = x;
     }
+
+    public abstract int distanceToO();
+
+    public abstract int distanceTo(PointD point);
 }

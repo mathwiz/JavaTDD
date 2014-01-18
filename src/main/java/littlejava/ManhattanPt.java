@@ -5,6 +5,8 @@ package littlejava;
  */
 public class ManhattanPt extends PointD {
 
+    public static final ManhattanPt ORIGIN = new ManhattanPt(0, 0);
+
     public ManhattanPt(int x, int y) {
         this.x = x;
         this.y = y;
@@ -16,5 +18,15 @@ public class ManhattanPt extends PointD {
                 "x=" + x +
                 ", y=" + y +
                 '}';
+    }
+
+    @Override
+    public int distanceToO() {
+        return distanceTo(ORIGIN);
+    }
+
+    @Override
+    public int distanceTo(PointD point) {
+        return Math.abs(x-point.x) + Math.abs(y-point.y);
     }
 }
