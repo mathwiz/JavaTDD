@@ -20,7 +20,6 @@ public class CartesianPt extends PointD {
                 '}';
     }
 
-
     @Override
     public int distanceToO() {
         return distanceTo(ORIGIN);
