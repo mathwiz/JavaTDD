@@ -1,18 +1,8 @@
 package algorithms.data;
 
-import java.util.Iterator;
-
 /**
- * Created by Yohan on 1/17/14.
+ * Created by yohanlee on 1/18/14.
  */
-public class Bag<E> extends LinkedListDataStructure<E> {
-
-    public void add(E item) {
-        Node<E> oldFirst = first;
-        first = new Node<E>();
-        first.setItem(item);
-        first.setNext(oldFirst);
-        n++;
-    }
-
+public interface Bag<E> extends Collection<E> {
+    void add(E item);
 }

@@ -5,7 +5,7 @@ import java.util.Iterator;
 /**
  * Created by yohanlee on 1/18/14.
  */
-public abstract class LinkedListDataStructure<E> implements Iterable<E> {
+public abstract class LinkedListDataStructure<E> implements Collection<E> {
     protected Node<E> first;
     protected int n;
 

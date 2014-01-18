@@ -8,11 +8,11 @@ import org.junit.Test;
  * Created by Yohan on 1/17/14.
  */
 public class BagTest {
-    Bag<Integer> bag;
+    LinkedListBag<Integer> bag;
 
     @Before
     public void setUp() throws Exception {
-        bag = new Bag<Integer>();
+        bag = new LinkedListBag<Integer>();
     }
 
     @Test
