@@ -16,11 +16,14 @@ public abstract class ShishD {
     }
 
     public static void main(String[] args) {
-        ShishD a = new Onion(new Lamb(new Onion(new Skewer())));
-        System.out.println(a);
-        System.out.println(a.onlyOnions());
-        ShishD b = new Onion(new Onion(new Onion(new Skewer())));
-        System.out.println(b);
-        System.out.println(b.onlyOnions());
+        ShishD onion = new Onion(new Lamb(new Onion(new Skewer())));
+        System.out.println(onion);
+        System.out.println(onion.onlyOnions());
+        onion = new Onion(new Onion(new Onion(new Skewer())));
+        System.out.println(onion);
+        System.out.println(onion.onlyOnions());
+        onion = new Onion(new Skewer());
+        System.out.println(onion);
+        System.out.println(onion.onlyOnions());
     }
 }
