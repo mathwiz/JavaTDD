@@ -4,6 +4,8 @@ package littlejava;
  * Created by Yohan on 1/18/14.
  */
 public abstract class ShishD {
+    abstract boolean onlyOnions();
+
     ShishD s;
 
     @Override

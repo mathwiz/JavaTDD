@@ -7,4 +7,9 @@ public class Tomato extends ShishD {
     public Tomato(ShishD s) {
         this.s = s;
     }
+
+    @Override
+    boolean onlyOnions() {
+        return false;
+    }
 }

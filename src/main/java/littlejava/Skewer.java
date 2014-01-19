@@ -5,6 +5,11 @@ package littlejava;
  */
 public class Skewer extends ShishD {
     @Override
+    boolean onlyOnions() {
+        return true;
+    }
+
+    @Override
     public String toString() {
         return "Skewer{}";
     }

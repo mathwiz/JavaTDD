@@ -7,4 +7,9 @@ public class Lamb extends ShishD {
     public Lamb(ShishD s) {
         this.s = s;
     }
+
+    @Override
+    boolean onlyOnions() {
+        return false;
+    }
 }
