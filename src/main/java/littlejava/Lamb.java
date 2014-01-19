@@ -9,6 +9,11 @@ public class Lamb extends ShishD {
     }
 
     @Override
+    boolean isVegetarian() {
+        return false;
+    }
+
+    @Override
     boolean onlyOnions() {
         return false;
     }

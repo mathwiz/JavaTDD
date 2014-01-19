@@ -9,6 +9,11 @@ public class Tomato extends ShishD {
     }
 
     @Override
+    boolean isVegetarian() {
+        return s.isVegetarian();
+    }
+
+    @Override
     boolean onlyOnions() {
         return false;
     }
