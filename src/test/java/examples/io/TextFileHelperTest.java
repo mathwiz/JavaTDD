@@ -24,4 +24,10 @@ public class TextFileHelperTest {
         for (String line = helper.readLine(); line != null; line = helper.readLine())
             System.out.println(line);
     }
+
+    @Test
+    public void testIterator() throws Exception {
+        for (String line : helper.getLines())
+            System.out.println(line);
+    }
 }

@@ -90,12 +90,12 @@ public class FileViewer extends Frame {
 
     private void setFile(String directory, String file) {
         if (file == null || file.length() == 0) return;
-        TextFileHelper reader = null;
+        TextFileHelper textFileHelper = null;
         try {
             File f = new File(directory, file);
-            reader = new TextFileHelper(f);
+            textFileHelper = new TextFileHelper(f);
             textarea.setText("");
-            for (String line = reader.readLine(); line != null; line = reader.readLine()) {
+            for (String line : textFileHelper.getLines()) {
                 textarea.append(line + System.getProperty("line.separator"));
             }
             this.setTitle("FileViewer: " + f.getAbsolutePath());
@@ -104,11 +104,7 @@ public class FileViewer extends Frame {
             textarea.setText(e.getClass().getName() + " " + e.getMessage());
             this.setTitle(file + ": " + e);
         } finally {
-            try {
-                if (reader != null) reader.close();
-            } catch (Exception e) {
-                System.out.println("Fatal error: " + e);
-            }
+            if (textFileHelper != null) textFileHelper.close();
         }
     }
 }
