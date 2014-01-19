@@ -74,13 +74,8 @@ public class FileViewer extends Frame {
         p.add(close);
         this.pack();
 
-        init(filename);
-    }
-
-    private void init(String filename) {
         File f = filename == null ? null : new File(filename);
-        String directory = f == null ? System.getProperty("user.dir") : f.getParent();
-        this.directory = directory;
+        directory = f == null ? System.getProperty("user.dir") : f.getParent();
         setFile(directory, (f != null && f.isAbsolute()) ? f.getName() : filename);
     }
 
