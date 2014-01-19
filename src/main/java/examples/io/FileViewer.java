@@ -11,9 +11,7 @@ import java.io.File;
  * Created by Yohan on 1/18/14.
  */
 public class FileViewer extends Frame {
-
-    public static final Font SANS_SERIF = new Font("SansSerif", Font.BOLD, 14);
-    public static final Font MONO_SPACED = new Font("MonoSpaced", Font.PLAIN, 11);
+    public static final Font MONO_SPACED = new Font("MonoSpaced", Font.PLAIN, 12);
 
     public static void main(String[] args) {
         Frame f = new FileViewer(args.length == 1 ? args[0] : null);
@@ -42,7 +40,7 @@ public class FileViewer extends Frame {
             }
         });
 
-        textarea = new TextArea("", 24, 80);
+        textarea = new TextArea("", 24, 90);
         textarea.setFont(MONO_SPACED);
         textarea.setEditable(false);
         this.add("Center", textarea);
@@ -63,7 +61,6 @@ public class FileViewer extends Frame {
                 f.dispose();
             }
         });
-        openfile.setFont(SANS_SERIF);
 
         Button close = new Button("Close");
         close.addActionListener(new ActionListener() {
@@ -72,7 +69,6 @@ public class FileViewer extends Frame {
                 dispose();
             }
         });
-        close.setFont(SANS_SERIF);
 
         p.add(openfile);
         p.add(close);
