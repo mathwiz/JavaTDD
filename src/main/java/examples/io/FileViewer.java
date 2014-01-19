@@ -12,7 +12,7 @@ import java.io.IOException;
 /**
  * Created by Yohan on 1/18/14.
  */
-public class FileViewer extends Frame implements ActionListener {
+public class FileViewer extends Frame {
 
     public static final Font SANS_SERIF = new Font("SansSerif", Font.BOLD, 14);
     public static final Font MONO_SPACED = new Font("MonoSpaced", Font.PLAIN, 11);
@@ -31,9 +31,11 @@ public class FileViewer extends Frame implements ActionListener {
 
     private TextArea textarea;
     private String directory;
+    private final Frame me;
 
     public FileViewer(String filename) {
         super();
+        me = this;
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent windowEvent) {
@@ -52,13 +54,28 @@ public class FileViewer extends Frame implements ActionListener {
         this.add(p, "South");
 
         Button openfile = new Button("Open File");
-        Button close = new Button("Close");
-        openfile.addActionListener(this);
-        openfile.setActionCommand("open");
+        openfile.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                FileDialog f = new FileDialog(me, "Open File", FileDialog.LOAD);
+                f.setDirectory(directory);
+                f.show();
+                directory = f.getDirectory();
+                setFile(directory, f.getFile());
+                f.dispose();
+            }
+        });
         openfile.setFont(SANS_SERIF);
-        close.addActionListener(this);
-        close.setActionCommand("close");
+
+        Button close = new Button("Close");
+        close.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                dispose();
+            }
+        });
         close.setFont(SANS_SERIF);
+
         p.add(openfile);
         p.add(close);
         this.pack();
@@ -71,21 +88,6 @@ public class FileViewer extends Frame implements ActionListener {
         String directory = f == null ? System.getProperty("user.dir") : f.getParent();
         this.directory = directory;
         setFile(directory, (f != null && f.isAbsolute()) ? f.getName() : filename);
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent actionEvent) {
-        String cmd = actionEvent.getActionCommand();
-        if (cmd.equals("open")) {
-            FileDialog f = new FileDialog(this, "Open File", FileDialog.LOAD);
-            f.setDirectory(directory);
-            f.show();
-            directory = f.getDirectory();
-            setFile(directory, f.getFile());
-            f.dispose();
-        } else if (cmd.equals("close")) {
-            this.dispose();
-        }
     }
 
     private void setFile(String directory, String file) {
