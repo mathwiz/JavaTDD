@@ -6,8 +6,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
 
 /**
  * Created by Yohan on 1/18/14.
@@ -92,24 +90,21 @@ public class FileViewer extends Frame {
 
     private void setFile(String directory, String file) {
         if (file == null || file.length() == 0) return;
-        FileReader in = null;
+        TextFileHelper reader = null;
         try {
-            in = new FileReader(new File(directory, file));
-            char[] buffer = new char[4096];
+            reader = new TextFileHelper(new File(directory, file));
             textarea.setText("");
-            int len = in.read(buffer);
-            while (len != -1) {
-                textarea.append(new String(buffer, 0, len));
-                len = in.read(buffer);
+            for (String line = reader.readLine(); line != null; line = reader.readLine()) {
+                textarea.append(line + System.getProperty("line.separator"));
             }
             this.setTitle("FileViewer: " + file);
             textarea.setCaretPosition(0);
-        } catch (IOException e) {
+        } catch (Exception e) {
             textarea.setText(e.getClass().getName() + " " + e.getMessage());
-            this.setTitle(file + ": IOException");
+            this.setTitle(file + ": " + e);
         } finally {
             try {
-                if (in != null) in.close();
+                if (reader != null) reader.close();
             } catch (Exception e) {
                 System.out.println("Fatal error: " + e);
             }
