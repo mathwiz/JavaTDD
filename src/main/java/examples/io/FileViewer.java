@@ -92,12 +92,13 @@ public class FileViewer extends Frame {
         if (file == null || file.length() == 0) return;
         TextFileHelper reader = null;
         try {
-            reader = new TextFileHelper(new File(directory, file));
+            File f = new File(directory, file);
+            reader = new TextFileHelper(f);
             textarea.setText("");
             for (String line = reader.readLine(); line != null; line = reader.readLine()) {
                 textarea.append(line + System.getProperty("line.separator"));
             }
-            this.setTitle("FileViewer: " + file);
+            this.setTitle("FileViewer: " + f.getAbsolutePath());
             textarea.setCaretPosition(0);
         } catch (Exception e) {
             textarea.setText(e.getClass().getName() + " " + e.getMessage());
