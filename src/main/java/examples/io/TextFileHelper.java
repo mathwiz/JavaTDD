@@ -1,7 +1,6 @@
 package examples.io;
 
 import java.io.*;
-import java.util.Iterator;
 
 /**
  * Created by Yohan on 1/18/14.
