@@ -6,39 +6,23 @@ public class HeartController implements ControllerInterface {
 
     public HeartController(HeartModelInterface model) {
         this.model = model;
-        this.view = new DJView(this, new HeartAdapter(model));
-        this.view.createView();
-        this.view.createControls();
-        this.view.disableStopMenuItem();
-        this.view.disableStartMenuItem();
+        view = new DJView(this, new HeartAdapter(model));
+        view.createView();
+        view.createControls();
+        view.disableStopMenuItem();
+        view.disableStartMenuItem();
     }
 
-    @Override
-    public void start() {
-        System.out.println("HeartController start");
-    }
+    public void start() {}
 
-    @Override
-    public void stop() {
-        System.out.println("HeartController stop");
+    public void stop() {}
 
-    }
+    public void increaseBPM() {}
 
-    @Override
-    public void increaseBPM() {
-        System.out.println("HeartController increaseBPM");
+    public void decreaseBPM() {}
 
-    }
-
-    @Override
-    public void decreaseBPM() {
-        System.out.println("HeartController decreaseBPM");
-
-    }
-
-    @Override
-    public void setBPM(int bpm) {
-        System.out.println("HeartController setBPM");
-
-    }
+    public void setBPM(int bpm) {}
 }
+
+
+
