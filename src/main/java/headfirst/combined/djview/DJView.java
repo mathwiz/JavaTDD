@@ -160,6 +160,7 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver {
         controlFrame.getContentPane().add(controlPanel, BorderLayout.CENTER);
 
         controlFrame.pack();
+        controlFrame.setLocationRelativeTo(null);
         controlFrame.setVisible(true);
     }
 }
