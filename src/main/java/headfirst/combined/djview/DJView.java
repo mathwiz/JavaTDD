@@ -87,7 +87,6 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver {
 
     @Override
     public void updateBeat() {
-        System.out.println("updateBeat");
         beatBar.setValue(model.getBPM());
     }
 

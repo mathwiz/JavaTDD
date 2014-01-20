@@ -20,7 +20,7 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
     public void on() {
         System.out.println("BeatModel on");
         sequencer.start();
-        setBPM(90);
+        setBPM(getBPM());
     }
 
     @Override
@@ -76,7 +76,6 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
     }
 
     public void beatEvent() {
-        System.out.println("Beat event fired");
         notifyBeatObservers();
     }
 
@@ -106,7 +105,7 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
     }
 
     public void buildTrackAndStart() {
-        int[] trackList = { 35, 0, 46, 0};
+        int[] trackList = {35, 0, 46, 0};
 
         sequence.deleteTrack(null);
         track = sequence.createTrack();
@@ -121,16 +120,17 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
     }
 
     public void makeTracks(int[] list) {
-        for(int i = 0; i < list.length; i++) {
+        for (int i = 0; i < list.length; i++) {
             int it = list[i];
             if (it != 0) {
                 track.add(makeEvent(144, 9, it, 100, i));
-                track.add(makeEvent(128, 9, it, 100, i+1));
+                track.add(makeEvent(128, 9, it, 100, i + 1));
             }
         }
     }
 
     public MidiEvent makeEvent(int cmd, int chan, int one, int two, int tick) {
+        System.out.println(String.format("Making MidiEvent cmd(%d) chan(%d) one(%d) two(%d) tick(%d)", cmd, chan, one, two, tick));
         MidiEvent event = null;
         try {
             ShortMessage a = new ShortMessage();
