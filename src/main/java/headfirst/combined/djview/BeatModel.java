@@ -18,27 +18,32 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
     }
 
     public void on() {
+        System.out.println("BeatModel on");
         sequencer.start();
         setBPM(90);
     }
 
     @Override
     public void registerObserver(BeatObserver o) {
+        System.out.println("Registering BeatObserver " + o);
         beatObservers.add(o);
     }
 
     @Override
     public void removeObserver(BeatObserver o) {
+        System.out.println("Removing BeatObserver " + o);
         beatObservers.remove(o);
     }
 
     @Override
     public void registerObserver(BPMObserver o) {
+        System.out.println("Registering BPMObserver " + o);
         bpmObservers.add(o);
     }
 
     @Override
     public void removeObserver(BPMObserver o) {
+        System.out.println("Removing BPMObserver " + o);
         bpmObservers.remove(o);
     }
 
@@ -53,6 +58,7 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
 
     @Override
     public void off() {
+        System.out.println("BeatModel off");
         setBPM(0);
         sequencer.stop();
     }
@@ -70,6 +76,7 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
     }
 
     public void beatEvent() {
+        System.out.println("Beat event fired");
         notifyBeatObservers();
     }
 
