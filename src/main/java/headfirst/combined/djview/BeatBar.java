@@ -3,7 +3,6 @@ package headfirst.combined.djview;
 import javax.swing.*;
 
 public class BeatBar extends JProgressBar implements Runnable {
-    JProgressBar progressBar;
     Thread thread;
 
     public BeatBar() {
@@ -14,12 +13,12 @@ public class BeatBar extends JProgressBar implements Runnable {
 
     public void run() {
         for(;;) {
-            int value = getValue();
-            value = (int)(value * .75);
+            int value = (int)(getValue() * .75);
+            System.out.println("Beat bar read value and scaled to " + value);
             setValue(value);
             repaint();
             try {
-                Thread.sleep(50);
+                Thread.sleep(250);
             } catch (Exception e) {};
         }
     }
