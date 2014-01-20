@@ -15,26 +15,30 @@ public class HeartController implements ControllerInterface {
 
     @Override
     public void start() {
-
+        System.out.println("HeartController start");
     }
 
     @Override
     public void stop() {
+        System.out.println("HeartController stop");
 
     }
 
     @Override
     public void increaseBPM() {
+        System.out.println("HeartController increaseBPM");
 
     }
 
     @Override
     public void decreaseBPM() {
+        System.out.println("HeartController decreaseBPM");
 
     }
 
     @Override
     public void setBPM(int bpm) {
+        System.out.println("HeartController setBPM");
 
     }
 }

@@ -27,12 +27,12 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver {
     public DJView(ControllerInterface controller, BeatModelInterface model) {
         this.controller = controller;
         this.model = model;
-        model.registerObserver((BeatObserver)this);
-        model.registerObserver((BPMObserver)this);
+        model.registerObserver((BeatObserver) this);
+        model.registerObserver((BPMObserver) this);
     }
 
     public void createView() {
-        viewPanel = new JPanel(new GridLayout(1,2));
+        viewPanel = new JPanel(new GridLayout(1, 2));
         viewFrame = new JFrame("View");
         viewFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         viewFrame.setSize(new Dimension(100, 80));
@@ -67,9 +67,12 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver {
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
         if (actionEvent.getSource() == setBPMButton) {
-            int bpm = Integer.parseInt(bpmTextField.getText());
-            System.out.println("Received bpm from input " + bpm);
-            controller.setBPM(bpm);
+            try {
+                System.out.println("Received bpm from input: " + bpmTextField.getText());
+                controller.setBPM(Integer.parseInt(bpmTextField.getText()));
+            } catch (NumberFormatException e) {
+                System.out.println("Bad input " + bpmTextField.getText());
+            }
         } else if (actionEvent.getSource() == increaseBPMButton) {
             controller.increaseBPM();
         } else if (actionEvent.getSource() == decreaseBPMButton) {
@@ -93,7 +96,7 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver {
         controlFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         controlFrame.setSize(new Dimension(100, 80));
 
-        controlPanel = new JPanel(new GridLayout(1,2));
+        controlPanel = new JPanel(new GridLayout(1, 2));
 
         menuBar = new JMenuBar();
         menu = new JMenu("DJ Control");
@@ -153,8 +156,8 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver {
         insideControlPanel.add(buttonPanel);
         controlPanel.add(insideControlPanel);
 
-        bpmLabel.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
-        bpmOutputLabel.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
+        bpmLabel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
+        bpmOutputLabel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 
         controlFrame.getRootPane().setDefaultButton(setBPMButton);
         controlFrame.getContentPane().add(controlPanel, BorderLayout.CENTER);
