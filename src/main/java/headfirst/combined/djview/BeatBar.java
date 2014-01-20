@@ -1,8 +1,11 @@
 package headfirst.combined.djview;
 
+import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 
 public class BeatBar extends JProgressBar implements Runnable {
+    JProgressBar progressBar;
     Thread thread;
 
     public BeatBar() {
@@ -13,7 +16,8 @@ public class BeatBar extends JProgressBar implements Runnable {
 
     public void run() {
         for(;;) {
-            int value = (int)(getValue() * .75);
+            int value = getValue();
+            value = (int)(value * .75);
             setValue(value);
             repaint();
             try {

@@ -14,31 +14,28 @@ public class BeatController implements ControllerInterface {
         model.initialize();
     }
 
-    @Override
     public void start() {
         model.on();
         view.disableStartMenuItem();
         view.enableStopMenuItem();
     }
 
-    @Override
     public void stop() {
         model.off();
         view.disableStopMenuItem();
         view.enableStartMenuItem();
     }
 
-    @Override
     public void increaseBPM() {
-        model.setBPM(model.getBPM() + 1);
+        int bpm = model.getBPM();
+        model.setBPM(bpm + 1);
     }
 
-    @Override
     public void decreaseBPM() {
-        model.setBPM(model.getBPM() - 1);
+        int bpm = model.getBPM();
+        model.setBPM(bpm - 1);
     }
 
-    @Override
     public void setBPM(int bpm) {
         model.setBPM(bpm);
     }
