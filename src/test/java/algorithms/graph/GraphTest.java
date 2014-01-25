@@ -8,7 +8,7 @@ import org.junit.Test;
  * Created by yohanlee on 1/18/14.
  */
 public abstract class GraphTest {
-    Graph g;
+    private Graph g;
 
     @Before
     public void setUp() throws Exception {
@@ -28,4 +28,7 @@ public abstract class GraphTest {
         g.addEdge(5,3);
     }
 
+    public Graph getGraph() {
+        return g;
+    }
 }

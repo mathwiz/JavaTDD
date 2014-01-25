@@ -10,7 +10,7 @@ public class DepthFirstSearchTest extends GraphTest {
     @Before
     public void setUp() throws Exception {
         super.setUp();
-        System.out.println(g);
+        System.out.println(getGraph());
     }
 
     @Test
@@ -23,9 +23,9 @@ public class DepthFirstSearchTest extends GraphTest {
     }
 
     private void printResults(int source) {
-        DepthFirstSearch dfs = new DepthFirstSearch(g, source);
+        DepthFirstSearch dfs = new DepthFirstSearch(getGraph(), source);
         System.out.println("\n" + dfs.count() + " vertices connected to " + source);
-        for (int i = 0; i < g.V(); i++) {
+        for (int i = 0; i < getGraph().V(); i++) {
             System.out.println((dfs.marked(i) ? "" : "Not ") + "Connected vertex " + i);
         }
     }

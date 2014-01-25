@@ -12,13 +12,14 @@ public class GraphsTest extends GraphTest {
     @Test
     public void testGetSizes() throws Exception {
         System.out.println("Examining Graph: ");
-        System.out.println(g);
-        Assert.assertEquals(13, g.V());
-        Assert.assertEquals(13, g.E());
+        System.out.println(getGraph());
+        Assert.assertEquals(13, getGraph().V());
+        Assert.assertEquals(13, getGraph().E());
     }
 
     @Test
     public void testGraphs() throws Exception {
+        Graph g = getGraph();
         String s = "";
         for (int w : g.adj(7))
             s += w + " ";
