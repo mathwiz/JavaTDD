@@ -27,6 +27,7 @@ public class UFTest {
             Pair<Integer, Integer> pair = new Pair<Integer, Integer>(in.nextInt(), in.nextInt());
             pairs.add(pair);
         }
+        in.close();
     }
 
     @Test
