@@ -6,8 +6,8 @@ import java.io.PrintStream;
  * Created by Yohan on 1/26/14.
  */
 public class Sorts {
-    public static void sort(Comparable[] a) {
-        //TODO
+    public static void sort(Comparable[] a, SortingAlgorithm algorithm) {
+        algorithm.sort(a);
     }
 
     public static boolean less(Comparable v, Comparable w) {
