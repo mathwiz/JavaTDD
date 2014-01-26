@@ -32,8 +32,8 @@ public class UF {
     }
 
     public static class State {
-        private int[] id;
-        private int N;
+        protected int[] id;
+        protected int N;
 
         public State(int n) {
             N = n;
@@ -56,8 +56,17 @@ public class UF {
     }
 
     public static class WeightedState extends State {
+        protected int[] sz;
+
         public WeightedState(int n) {
             super(n);
+            sz = new int[N];
+            for (int i = 0; i < N; i++)
+                sz[i] = 1;
+        }
+
+        public int[] getSize() {
+            return sz;
         }
     }
 }
