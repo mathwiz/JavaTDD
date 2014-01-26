@@ -22,14 +22,14 @@ public class DepthFirstPathsTest extends GraphTest {
         Graph g = getGraph();
         Paths search = new DepthFirstPaths(g, source);
         for(int v = 0; v < getGraph().V(); v++) {
-            System.out.println("\n" + source + " to " + v + ": ");
+            System.out.println(source + " to " + v + ": ");
             if (search.hasPathTo(v)) {
                 for (int x : search.pathTo(v)) {
                     if (x == source) System.out.print(x);
                     else System.out.print("-" + x);
                 }
             }
-            System.out.println();
+            System.out.println("\n");
         }
     }
 }
