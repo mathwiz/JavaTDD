@@ -40,7 +40,6 @@ public class UFTest {
         Date end = new Date();
         System.out.println("Processing took " + (end.getTime() - start.getTime()) + " milliseconds");
         doAssert();
-
     }
 
     @Test
