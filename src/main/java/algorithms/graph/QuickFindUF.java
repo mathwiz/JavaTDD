@@ -3,7 +3,7 @@ package algorithms.graph;
 /**
  * Created by Yohan on 1/26/14.
  */
-public class QuickUF extends AbstractUFStrategy {
+public class QuickFindUF extends AbstractUFStrategy {
 
     @Override
     public void union(int p, int q) {

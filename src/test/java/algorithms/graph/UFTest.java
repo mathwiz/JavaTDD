@@ -29,8 +29,8 @@ public class UFTest {
     @Test
     public void testQuick() throws Exception {
         int n = pairs.size() - 1;
-        System.out.println("\nQuickUF starting with N " + n);
-        uf = new UF(n, new QuickUF());
+        System.out.println("\nQuickFindUF starting with N " + n);
+        uf = new UF(n, new QuickFindUF());
         process();
         doAssert();
 
