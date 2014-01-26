@@ -10,9 +10,8 @@ public class UF {
     private UFStrategy strategy;
 
     public UF(int n, UFStrategy strategy) {
-        this.state = new State(n);
         this.strategy = strategy;
-        this.strategy.setState(this.state);
+        this.state = strategy.createState(n);
     }
 
     public void union(int p, int q) {
@@ -53,6 +52,12 @@ public class UF {
 
         public void decrement() {
             N--;
+        }
+    }
+
+    public static class WeightedState extends State {
+        public WeightedState(int n) {
+            super(n);
         }
     }
 }

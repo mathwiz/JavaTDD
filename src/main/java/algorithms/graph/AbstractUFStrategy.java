@@ -5,9 +5,4 @@ package algorithms.graph;
  */
 public abstract class AbstractUFStrategy implements UFStrategy {
     protected UF.State state;
-
-    @Override
-    public void setState(UF.State state) {
-        this.state = state;
-    }
 }

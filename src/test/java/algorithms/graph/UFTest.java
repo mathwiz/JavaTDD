@@ -27,10 +27,20 @@ public class UFTest {
     }
 
     @Test
-    public void testQuick() throws Exception {
+    public void testQuickFind() throws Exception {
         int n = pairs.size() - 1;
         System.out.println("\nQuickFindUF starting with N " + n);
         uf = new UF(n, new QuickFindUF());
+        process();
+        doAssert();
+
+    }
+
+    @Test
+    public void testQuickUnion() throws Exception {
+        int n = pairs.size() - 1;
+        System.out.println("\nQuickUnionUF starting with N " + n);
+        uf = new UF(n, new QuickUnionUF());
         process();
         doAssert();
 

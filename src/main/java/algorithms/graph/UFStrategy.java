@@ -4,7 +4,7 @@ package algorithms.graph;
  * Created by Yohan on 1/26/14.
  */
 public interface UFStrategy {
-    void setState(UF.State state);
+    UF.State createState(int n);
 
     void union(int p, int q);
 

@@ -3,7 +3,7 @@ package algorithms.graph;
 /**
  * Created by Yohan on 1/26/14.
  */
-public class QuickFindUF extends AbstractUFStrategy {
+public class QuickUnionUF extends AbstractUFStrategy {
     @Override
     public UF.State createState(int n) {
         return this.state = new UF.State(n);
@@ -15,14 +15,16 @@ public class QuickFindUF extends AbstractUFStrategy {
         int qId = find(q);
         if (pId == qId) return;
 
-        //put p and q into same component by replacing p's with qId
-        for (int i = 0; i < state.getId().length; i++)
-            if (state.getId()[i] == pId) state.getId()[i] = qId;
+        //put p and q into same component by making p's link go to qId
+        state.getId()[pId] = qId;
         state.decrement();
     }
 
     @Override
     public int find(int p) {
-        return state.getId()[p];
+        int id = p;
+        while (id != state.getId()[id])
+            id = state.getId()[id];
+        return id;
     }
 }
