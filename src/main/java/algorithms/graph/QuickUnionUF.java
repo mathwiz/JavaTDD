@@ -22,6 +22,7 @@ public class QuickUnionUF extends AbstractUFStrategy {
 
     @Override
     public int find(int p) {
+        //determine the id of the component by finding the root site at a tree representing connected sites
         int id = p;
         while (id != state.getId()[id])
             id = state.getId()[id];
