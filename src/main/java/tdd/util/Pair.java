@@ -1,4 +1,4 @@
-package util;
+package tdd.util;
 
 /**
  * Created by Yohan on 1/26/14.

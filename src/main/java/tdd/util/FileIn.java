@@ -1,8 +1,7 @@
-package util;
+package tdd.util;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.net.URL;
 import java.util.Scanner;
 
 /**
@@ -29,11 +28,11 @@ public class FileIn {
         return file;
     }
 
-    boolean hasNextInt() {
+    public boolean hasNextInt() {
         return scanner.hasNextInt();
     }
 
-    int nextInt() {
+    public int nextInt() {
         if (scanner.hasNextInt()) return scanner.nextInt();
         else throw new RuntimeException("No more integer input");
     }
