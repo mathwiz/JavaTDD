@@ -1,5 +1,7 @@
 package algorithms.graph;
 
+import headfirst.combined.djview.ControllerInterface;
+
 /**
  * Created by Yohan on 1/26/14.
  */
@@ -14,7 +16,8 @@ public class UF {
     }
 
     public void union(int p, int q) {
-        strategy.union(p, q);
+        if (!connected(p, q))
+            strategy.union(p, q);
     }
 
     public int find(int p) {
@@ -30,10 +33,18 @@ public class UF {
     }
 
     public static class State {
+        private int[] id;
         private int N;
 
         public State(int n) {
             N = n;
+            id = new int[N];
+            for (int i = 0; i < N; i++)
+                id[i] = i;
+        }
+
+        public int[] getId() {
+            return id;
         }
 
         public int count() {

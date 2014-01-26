@@ -19,4 +19,9 @@ public class Pair<E, F> {
     public F getRight() {
         return right;
     }
+
+    @Override
+    public String toString() {
+        return "Left: " + left + " Right: " + right;
+    }
 }
