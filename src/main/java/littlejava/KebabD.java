@@ -9,10 +9,12 @@ public abstract class KebabD {
     public abstract Object whatHolder();
 
     public static void main(String[] args) {
-        KebabD kebab = new Shallot(
-                new Radish(
-                        new Holder(
-                                new Dagger()
+        KebabD kebab = new Shrimp(
+                new Shallot(
+                        new Radish(
+                                new Holder(
+                                        new Dagger()
+                                )
                         )
                 )
         );

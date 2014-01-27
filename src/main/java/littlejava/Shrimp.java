@@ -19,4 +19,11 @@ public class Shrimp extends KebabD {
     public Object whatHolder() {
         return k.whatHolder();
     }
+
+    @Override
+    public String toString() {
+        return "Shrimp{" +
+                "k=" + k +
+                '}';
+    }
 }
