@@ -11,6 +11,11 @@ public class Radish extends KebabD {
     }
 
     @Override
+    public boolean isVeggie() {
+        return k.isVeggie();
+    }
+
+    @Override
     public String toString() {
         return "Radish{" +
                 "k=" + k +

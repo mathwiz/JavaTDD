@@ -11,6 +11,11 @@ public class Shallot extends KebabD {
     }
 
     @Override
+    public boolean isVeggie() {
+        return k.isVeggie();
+    }
+
+    @Override
     public String toString() {
         return "Shallot{" +
                 "k=" + k +

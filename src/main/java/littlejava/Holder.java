@@ -11,6 +11,11 @@ public class Holder extends KebabD {
     }
 
     @Override
+    public boolean isVeggie() {
+        return true;
+    }
+
+    @Override
     public String toString() {
         return "Holder{" +
                 "o=" + o +

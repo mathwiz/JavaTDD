@@ -9,4 +9,9 @@ public class Shrimp extends KebabD {
     public Shrimp(KebabD k) {
         this.k = k;
     }
+
+    @Override
+    public boolean isVeggie() {
+        return false;
+    }
 }
