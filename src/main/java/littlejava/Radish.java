@@ -9,4 +9,11 @@ public class Radish extends KebabD {
     public Radish(KebabD k) {
         this.k = k;
     }
+
+    @Override
+    public String toString() {
+        return "Radish{" +
+                "k=" + k +
+                '}';
+    }
 }

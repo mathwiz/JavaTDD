@@ -9,4 +9,11 @@ public class Shallot extends KebabD {
     public Shallot(KebabD k) {
         this.k = k;
     }
+
+    @Override
+    public String toString() {
+        return "Shallot{" +
+                "k=" + k +
+                '}';
+    }
 }

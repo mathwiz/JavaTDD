@@ -9,4 +9,11 @@ public class Holder extends KebabD {
     public Holder(Object o) {
         this.o = o;
     }
+
+    @Override
+    public String toString() {
+        return "Holder{" +
+                "o=" + o +
+                '}';
+    }
 }
