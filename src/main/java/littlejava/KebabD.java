@@ -9,15 +9,13 @@ public abstract class KebabD {
     public abstract Object whatHolder();
 
     public static void main(String[] args) {
-        KebabD kebab = new Shrimp(
+        KebabD kebab =
+                new Zucchini(
+                new ChiliPepper(
                 new Shallot(
-                        new Radish(
-                                new Holder(
-                                        new Dagger()
-                                )
-                        )
-                )
-        );
+                new Radish(
+                new Holder(
+                new Dagger())))));
         System.out.println(kebab);
         System.out.println(" is veggie " + kebab.isVeggie());
         System.out.println(" has holder " + kebab.whatHolder());
