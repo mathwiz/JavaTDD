@@ -16,6 +16,11 @@ public class Shallot extends KebabD {
     }
 
     @Override
+    public Object whatHolder() {
+        return k.whatHolder();
+    }
+
+    @Override
     public String toString() {
         return "Shallot{" +
                 "k=" + k +

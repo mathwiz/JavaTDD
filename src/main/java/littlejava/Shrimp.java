@@ -14,4 +14,9 @@ public class Shrimp extends KebabD {
     public boolean isVeggie() {
         return false;
     }
+
+    @Override
+    public Object whatHolder() {
+        return k.whatHolder();
+    }
 }

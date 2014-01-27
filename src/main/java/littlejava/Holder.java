@@ -16,6 +16,11 @@ public class Holder extends KebabD {
     }
 
     @Override
+    public Object whatHolder() {
+        return o;
+    }
+
+    @Override
     public String toString() {
         return "Holder{" +
                 "o=" + o +

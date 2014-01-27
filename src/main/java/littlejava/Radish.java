@@ -16,6 +16,11 @@ public class Radish extends KebabD {
     }
 
     @Override
+    public Object whatHolder() {
+        return k.whatHolder();
+    }
+
+    @Override
     public String toString() {
         return "Radish{" +
                 "k=" + k +

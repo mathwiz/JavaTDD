@@ -6,6 +6,8 @@ package littlejava;
 public abstract class KebabD {
     public abstract boolean isVeggie();
 
+    public abstract Object whatHolder();
+
     public static void main(String[] args) {
         KebabD kebab = new Shallot(
                 new Radish(
@@ -14,7 +16,8 @@ public abstract class KebabD {
                         )
                 )
         );
-        System.out.print(kebab);
+        System.out.println(kebab);
         System.out.println(" is veggie " + kebab.isVeggie());
+        System.out.println(" has holder " + kebab.whatHolder());
     }
 }
