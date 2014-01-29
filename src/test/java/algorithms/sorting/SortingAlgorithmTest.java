@@ -15,8 +15,16 @@ public class SortingAlgorithmTest extends SortTest {
 
     @Test
     public void testSelectionSort() throws Exception {
-        Sorts.show(a);
+        System.out.println("Selection Sort");
         Sorts.sort(a, new SelectionSort<String>());
+        Sorts.show(a);
+    }
+
+
+    @Test
+    public void testInsertionSort() throws Exception {
+        System.out.println("Insertion Sort");
+        Sorts.sort(a, new InsertionSort<String>());
         Sorts.show(a);
     }
 }
