@@ -8,6 +8,7 @@ public class InsertionSort<T> implements SortingAlgorithm<T> {
     public void sort(Comparable<T>[] a) {
         int N = a.length;
         for (int i = 1; i < N; i++) {
+            Sorts.show(a);
             for (int j = i; j > 0 && Sorts.less(a[j], a[j-1]); j--) {
                 Sorts.exch(a, j, j-1);
             }

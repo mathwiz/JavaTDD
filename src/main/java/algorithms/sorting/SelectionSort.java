@@ -8,6 +8,7 @@ public class SelectionSort<T> implements SortingAlgorithm<T> {
     public void sort(Comparable<T>[] a) {
         int N = a.length;
         for (int i = 0; i < N; i++) {
+            Sorts.show(a);
             int min = i;
             for (int j = i+1; j < N; j++)
                 if (Sorts.less(a[j], a[min])) min = j;

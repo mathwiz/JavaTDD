@@ -15,14 +15,20 @@ public class SortingAlgorithmTest extends SortTest {
     }
 
     @Test
+    public void testShellSort() throws Exception {
+        System.out.println("Shell Sort");
+        Assert.assertFalse(Sorts.isSorted(a));
+        Sorts.sort(a, new ShellSort<String>());
+        Assert.assertTrue(Sorts.isSorted(a));
+    }
+
+    @Test
     public void testSelectionSort() throws Exception {
         System.out.println("Selection Sort");
         Assert.assertFalse(Sorts.isSorted(a));
         Sorts.sort(a, new SelectionSort<String>());
         Assert.assertTrue(Sorts.isSorted(a));
-        Sorts.show(a);
     }
-
 
     @Test
     public void testInsertionSort() throws Exception {
@@ -30,6 +36,5 @@ public class SortingAlgorithmTest extends SortTest {
         Assert.assertFalse(Sorts.isSorted(a));
         Sorts.sort(a, new InsertionSort<String>());
         Assert.assertTrue(Sorts.isSorted(a));
-        Sorts.show(a);
     }
 }
