@@ -18,7 +18,7 @@ public class SortingAlgorithmTest extends SortTest {
     public void testShellSort() throws Exception {
         System.out.println("Shell Sort");
         Assert.assertFalse(Sorts.isSorted(a));
-        Sorts.sort(a, new ShellSort<String>());
+        Sorts.sort(a, new IterationPrintingSort(new ShellSort<String>()));
         Assert.assertTrue(Sorts.isSorted(a));
     }
 
@@ -26,7 +26,7 @@ public class SortingAlgorithmTest extends SortTest {
     public void testSelectionSort() throws Exception {
         System.out.println("Selection Sort");
         Assert.assertFalse(Sorts.isSorted(a));
-        Sorts.sort(a, new SelectionSort<String>());
+        Sorts.sort(a, new IterationPrintingSort(new SelectionSort<String>()));
         Assert.assertTrue(Sorts.isSorted(a));
     }
 
@@ -34,7 +34,7 @@ public class SortingAlgorithmTest extends SortTest {
     public void testInsertionSort() throws Exception {
         System.out.println("Insertion Sort");
         Assert.assertFalse(Sorts.isSorted(a));
-        Sorts.sort(a, new InsertionSort<String>());
+        Sorts.sort(a, new IterationPrintingSort(new InsertionSort<String>()));
         Assert.assertTrue(Sorts.isSorted(a));
     }
 }
