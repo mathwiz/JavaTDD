@@ -18,10 +18,10 @@ public class InsertionSort<T> implements SortingAlgorithm<T>, IterationProcessin
     public void sort(Comparable<T>[] a, SortingIterationHandler<T> iterationHandler) {
         int N = a.length;
         for (int i = 1; i < N; i++) {
-            iterationHandler.handle(a);
             for (int j = i; j > 0 && Sorts.less(a[j], a[j-1]); j--) {
                 Sorts.exch(a, j, j-1);
             }
+            iterationHandler.handle(a);
         }
     }
 }

@@ -23,10 +23,10 @@ public class ShellSort<T> implements SortingAlgorithm<T>, IterationProcessingSor
         }
         while (h >= 1) {
             for (int i = h; i < N; i++) {
-                iterationHandler.handle(a);
                 for (int j = i; j >= h && Sorts.less(a[j], a[j - h]); j -= h) {
                     Sorts.exch(a, j, j - h);
                 }
+                iterationHandler.handle(a);
             }
             h = h / 3;
         }

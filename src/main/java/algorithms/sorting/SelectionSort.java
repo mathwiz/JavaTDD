@@ -18,11 +18,11 @@ public class SelectionSort<T> implements SortingAlgorithm<T>, IterationProcessin
     public void sort(Comparable[] a, SortingIterationHandler iterationHandler) {
         int N = a.length;
         for (int i = 0; i < N; i++) {
-            iterationHandler.handle(a);
             int min = i;
             for (int j = i+1; j < N; j++)
                 if (Sorts.less(a[j], a[min])) min = j;
             Sorts.exch(a, i, min);
+            iterationHandler.handle(a);
         }
     }
 }
