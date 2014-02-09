@@ -1,22 +1,26 @@
 package algorithms.sorting;
 
+import java.io.PrintStream;
+
 /**
  * Created by Yohan on 2/9/14.
  */
-public class IterationPrintingSort<T> implements SortingAlgorithm<T> {
-    private IterationProcessingSortingAlgorithm<T> alg;
+public class IterationPrintingSort<T> extends IterationDecorator<T> {
+    PrintStream output;
 
-    public IterationPrintingSort(IterationProcessingSortingAlgorithm<T> a) {
-        alg = a;
+    public IterationPrintingSort(SortingAlgorithm<T> alg) {
+        this(alg, System.out);
     }
 
-    @Override
-    public void sort(Comparable<T>[] a) {
-        alg.sort(a, new SortingIterationHandler<T>() {
+    public IterationPrintingSort(SortingAlgorithm<T> alg, PrintStream out) {
+        super(alg);
+        output = out;
+        iterationHandler = new SortingIterationHandler<T>() {
             @Override
             public void handle(Comparable<T>[] a) {
-                Sorts.show(a);
+                Sorts.show(a, output);
             }
-        });
+        };
     }
+
 }
