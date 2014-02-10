@@ -25,6 +25,8 @@ public class MergeSort<T> implements SortingAlgorithm<T>, IterationProcessingSor
         sort(a, lo, mid, iterationHandler);
         sort(a, mid + 1, hi, iterationHandler);
         merge(a, lo, mid, hi);
+        System.out.println(String.format("lo %d mid %d hi %d", lo, mid, hi));
+        iterationHandler.handle(a);
     }
 
     private void merge(Comparable<T>[] a, int lo, int mid, int hi) {

@@ -42,7 +42,7 @@ public class SortingAlgorithmTest extends SortTest {
     public void testMergeSort() throws Exception {
         System.out.println("Mergesort");
         Assert.assertFalse(Sorts.isSorted(a));
-        Sorts.sort(a, new IterationPrintingSort(new InsertionSort<String>()));
+        Sorts.sort(a, new IterationPrintingSort(new MergeSort<String>()));
         Assert.assertTrue(Sorts.isSorted(a));
     }
 }
