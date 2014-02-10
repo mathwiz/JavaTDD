@@ -6,12 +6,7 @@ package algorithms.sorting;
 public class ShellSort<T> implements SortingAlgorithm<T>, IterationProcessingSortingAlgorithm {
     @Override
     public void sort(Comparable[] a) {
-        sort(a, new SortingIterationHandler() {
-            @Override
-            public void handle(Comparable[] a) {
-                //do nothing
-            }
-        });
+        sort(a, new NoOpSortingIterationHandler<T>());
     }
 
     @Override

@@ -6,12 +6,7 @@ package algorithms.sorting;
 public class InsertionSort<T> implements SortingAlgorithm<T>, IterationProcessingSortingAlgorithm<T> {
     @Override
     public void sort(Comparable<T>[] a) {
-        sort(a, new SortingIterationHandler<T>() {
-            @Override
-            public void handle(Comparable<T>[] a) {
-                //do nothing
-            }
-        });
+        sort(a, new NoOpSortingIterationHandler<T>());
     }
 
     @Override
