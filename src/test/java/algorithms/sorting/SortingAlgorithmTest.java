@@ -39,10 +39,18 @@ public class SortingAlgorithmTest extends SortTest {
     }
 
     @Test
-    public void testMergeSort() throws Exception {
-        System.out.println("Mergesort");
+    public void testMergeSortTopDown() throws Exception {
+        System.out.println("Top Down Mergesort");
         Assert.assertFalse(Sorts.isSorted(a));
-        Sorts.sort(a, new IterationPrintingSort(new MergeSort<String>()));
+        Sorts.sort(a, new IterationPrintingSort(new MergeTDSort<String>()));
+        Assert.assertTrue(Sorts.isSorted(a));
+    }
+
+    @Test
+    public void testMergeSortBottomUp() throws Exception {
+        System.out.println("Bottom Up Mergesort");
+        Assert.assertFalse(Sorts.isSorted(a));
+        Sorts.sort(a, new IterationPrintingSort(new MergeBUSort<String>()));
         Assert.assertTrue(Sorts.isSorted(a));
     }
 }
