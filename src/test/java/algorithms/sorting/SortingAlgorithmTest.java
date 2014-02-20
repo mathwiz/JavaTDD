@@ -53,4 +53,12 @@ public class SortingAlgorithmTest extends SortTest {
         Sorts.sort(a, new IterationPrintingSort(new MergeBUSort<String>()));
         Assert.assertTrue(Sorts.isSorted(a));
     }
+
+    @Test
+    public void testQuicksort() throws Exception {
+        System.out.println("Quicksort");
+        Assert.assertFalse(Sorts.isSorted(a));
+        Sorts.sort(a, new IterationPrintingSort(new QuickSort<String>()));
+        Assert.assertTrue(Sorts.isSorted(a));
+    }
 }

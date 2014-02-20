@@ -13,7 +13,7 @@ public class MergeBUSort<T>  extends MergeSort<T> {
                 int mid = lo + sz -1;
                 int hi = Math.min(lo + sz + sz - 1, N - 1);
                 merge(a, lo, mid, hi);
-                System.out.println(String.format("lo %d mid %d hi %d", lo, mid, hi));
+//                System.out.println(String.format("lo %d mid %d hi %d", lo, mid, hi));
                 iterationHandler.handle(a);
             }
     }
