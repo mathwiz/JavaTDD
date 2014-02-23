@@ -8,12 +8,14 @@ import org.junit.Test;
  */
 public class PizzaDTest {
     private static PizzaD testData() {
-        return new Anchovy(
-                new Olive(
-                        new Anchovy(
-                                new Sausage(
-                                        new Cheese(
-                                                new Crust()
+        return new Spinach(
+                new Anchovy(
+                        new Olive(
+                                new Anchovy(
+                                        new Sausage(
+                                                new Cheese(
+                                                        new Crust()
+                                                )
                                         )
                                 )
                         )
