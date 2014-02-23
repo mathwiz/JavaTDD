@@ -42,5 +42,11 @@ public class PizzaDTest {
         PizzaD p = test;
         System.out.println(p.topAnchovyWithCheese());
         System.out.println(p.removeAnchovy().topAnchovyWithCheese());
+        System.out.println(p.topAnchovyWithCheese().removeAnchovy());
+    }
+
+    @Test
+    public void testSubstituteAnchovyWithCheese() throws Exception {
+        System.out.println(test.substituteAnchovyWithCheese());
     }
 }

@@ -10,6 +10,11 @@ public class Crust extends PizzaD {
     }
 
     @Override
+    public PizzaD substituteAnchovyWithCheese() {
+        return new Crust();
+    }
+
+    @Override
     public PizzaD topAnchovyWithCheese() {
         return new Crust();
     }

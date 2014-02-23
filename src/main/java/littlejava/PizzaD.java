@@ -10,6 +10,8 @@ public abstract class PizzaD {
 
     public abstract PizzaD topAnchovyWithCheese();
 
+    public abstract PizzaD substituteAnchovyWithCheese();
+
     @Override
     public String toString() {
         return this.getClass().getSimpleName() +

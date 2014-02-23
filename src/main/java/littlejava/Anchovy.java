@@ -17,4 +17,9 @@ public class Anchovy extends PizzaD {
     public PizzaD topAnchovyWithCheese() {
         return new Cheese(new Anchovy(p.topAnchovyWithCheese()));
     }
+
+    @Override
+    public PizzaD substituteAnchovyWithCheese() {
+        return new Cheese(p.substituteAnchovyWithCheese());
+    }
 }
