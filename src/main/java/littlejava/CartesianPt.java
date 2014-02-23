@@ -8,8 +8,7 @@ public class CartesianPt extends PointD {
     public static final CartesianPt ORIGIN = new CartesianPt(0, 0);
 
     public CartesianPt(int x, int y) {
-        this.x = x;
-        this.y = y;
+        super(x, y);
     }
 
     @Override

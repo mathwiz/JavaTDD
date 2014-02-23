@@ -8,8 +8,7 @@ public class ManhattanPt extends PointD {
     public static final ManhattanPt ORIGIN = new ManhattanPt(0, 0);
 
     public ManhattanPt(int x, int y) {
-        this.x = x;
-        this.y = y;
+        super(x, y);
     }
 
     @Override

@@ -7,6 +7,11 @@ public abstract class PointD {
     int x;
     int y;
 
+    protected PointD(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
     public int getY() {
         return y;
     }
