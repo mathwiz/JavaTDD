@@ -12,4 +12,9 @@ public class Anchovy extends PizzaD {
     public PizzaD removeAnchovy() {
         return p.removeAnchovy();
     }
+
+    @Override
+    public PizzaD topAnchovyWithCheese() {
+        return new Cheese(new Anchovy(p.topAnchovyWithCheese()));
+    }
 }

@@ -8,4 +8,9 @@ public class Crust extends PizzaD {
     public PizzaD removeAnchovy() {
         return new Crust();
     }
+
+    @Override
+    public PizzaD topAnchovyWithCheese() {
+        return new Crust();
+    }
 }

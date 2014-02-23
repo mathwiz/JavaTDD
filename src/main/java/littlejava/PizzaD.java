@@ -8,6 +8,8 @@ public abstract class PizzaD {
 
     public abstract PizzaD removeAnchovy();
 
+    public abstract PizzaD topAnchovyWithCheese();
+
     @Override
     public String toString() {
         return this.getClass().getSimpleName() +
@@ -17,5 +19,6 @@ public abstract class PizzaD {
     public static void main(String[] args) {
         PizzaD p1 = new Cheese(new Sausage(new Olive(new Anchovy(new Crust()))));
         System.out.println(p1);
+        System.out.println(p1.topAnchovyWithCheese());
     }
 }

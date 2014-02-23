@@ -11,8 +11,8 @@ public class PizzaDTest {
         return new Anchovy(
                 new Olive(
                         new Anchovy(
-                                new Cheese(
-                                        new Anchovy(
+                                new Sausage(
+                                        new Cheese(
                                                 new Crust()
                                         )
                                 )
@@ -21,15 +21,26 @@ public class PizzaDTest {
         );
     }
 
+    private PizzaD test;
+
     @Before
     public void setUp() throws Exception {
+        test = testData();
+        System.out.println(test);
     }
 
     @Test
     public void testRemoveAnchovy() throws Exception {
-        PizzaD p = testData();
+        PizzaD p = test;
         System.out.println(p.removeAnchovy());
-        PizzaD p2 = new Anchovy(new Crust());
+        PizzaD p2 = new Anchovy(new Anchovy(new Crust()));
         System.out.println(p2.removeAnchovy());
+    }
+
+    @Test
+    public void testTopAnchovyWithCheese() throws Exception {
+        PizzaD p = test;
+        System.out.println(p.topAnchovyWithCheese());
+        System.out.println(p.removeAnchovy().topAnchovyWithCheese());
     }
 }
