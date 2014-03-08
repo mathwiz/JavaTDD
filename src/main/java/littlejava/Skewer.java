@@ -6,7 +6,7 @@ package littlejava;
 public class Skewer extends ShishD {
     @Override
     boolean onlyOnions() {
-        return true;
+        return ooFn.forSkewer();
     }
 
     @Override

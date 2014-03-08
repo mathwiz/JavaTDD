@@ -15,6 +15,6 @@ public class Tomato extends ShishD {
 
     @Override
     boolean onlyOnions() {
-        return false;
+        return ooFn.forTomato(this.s);
     }
 }

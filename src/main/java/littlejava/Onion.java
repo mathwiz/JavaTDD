@@ -16,6 +16,6 @@ public class Onion extends ShishD {
 
     @Override
     boolean onlyOnions() {
-        return s.onlyOnions();
+        return ooFn.forOnion(this.s);
     }
 }

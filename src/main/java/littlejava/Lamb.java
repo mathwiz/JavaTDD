@@ -15,6 +15,6 @@ public class Lamb extends ShishD {
 
     @Override
     boolean onlyOnions() {
-        return false;
+        return ooFn.forLamb(this.s);
     }
 }

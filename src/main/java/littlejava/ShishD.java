@@ -7,6 +7,8 @@ public abstract class ShishD {
     abstract boolean onlyOnions();
     abstract boolean isVegetarian();
 
+    OnlyOnionsV ooFn = new OnlyOnionsV();
+
     ShishD s;
 
     @Override
