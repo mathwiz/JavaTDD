@@ -11,7 +11,7 @@ public class Onion extends ShishD {
 
     @Override
     boolean isVegetarian() {
-        return s.isVegetarian();
+        return ivFn.forOnion(this.s);
     }
 
     @Override

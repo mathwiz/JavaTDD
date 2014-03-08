@@ -10,7 +10,7 @@ public class Lamb extends ShishD {
 
     @Override
     boolean isVegetarian() {
-        return false;
+        return ivFn.forLamb(this.s);
     }
 
     @Override

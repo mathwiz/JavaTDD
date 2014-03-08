@@ -10,7 +10,7 @@ public class Tomato extends ShishD {
 
     @Override
     boolean isVegetarian() {
-        return s.isVegetarian();
+        return ivFn.forTomato(this.s);
     }
 
     @Override

@@ -11,7 +11,7 @@ public class Skewer extends ShishD {
 
     @Override
     boolean isVegetarian() {
-        return true;
+        return ivFn.forSkewer();
     }
 
     @Override
