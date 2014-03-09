@@ -11,4 +11,17 @@ public class Top extends PieD {
         this.t = t;
         this.r = r;
     }
+
+    @Override
+    public String toString() {
+        return "Top{" +
+                "t=" + t +
+                ", r=" + r +
+                '}';
+    }
+
+    @Override
+    public PieD remA() {
+        return raFn.forTop(t, r);
+    }
 }
