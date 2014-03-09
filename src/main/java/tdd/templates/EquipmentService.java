@@ -27,39 +27,40 @@ public abstract class EquipmentService<T extends Equipment> {
     }
 
     public final <K> Map<K, List<T>> index(List<T> items, Method accessor) {
-        Mapper<K, T> mapper = new Mapper<K, T>(items, accessor);
-        return mapper.map();
+        return new MultiMapper<K, T>(items, accessor).map();
     }
 
     protected final Method getMethod(Class c, String name) {
         try {
-            Method m = c.getMethod(name);
-            return m;
+            return c.getMethod(name);
         } catch (NoSuchMethodException e) {
             throw new RuntimeException(e);
         }
     }
 
-    private class Mapper<K, T> {
+    private class MultiMapper<K, T> {
         List<T> data;
         Method method;
 
-        Mapper(List<T> input, Method m) {
+        MultiMapper(List<T> input, Method m) {
             data = input;
             method = m;
+        }
+
+        K getKey(T item) {
+            try {
+                return  (K) method.invoke(item);
+            } catch (IllegalAccessException e) {
+                throw new RuntimeException(e);
+            } catch (InvocationTargetException e) {
+                throw new RuntimeException(e);
+            }
         }
 
         Map<K, List<T>> map() {
             Map<K, List<T>> map = new HashMap<K, List<T>>();
             for (T it : data) {
-                K key = null;
-                try {
-                    key = (K) method.invoke(it);
-                } catch (IllegalAccessException e) {
-                    throw new RuntimeException(e);
-                } catch (InvocationTargetException e) {
-                    throw new RuntimeException(e);
-                }
+                K key = getKey(it);
                 List<T> a = map.get(key);
                 if (a == null) {
                     a = new LinkedList<T>();
