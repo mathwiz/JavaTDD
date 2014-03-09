@@ -10,15 +10,15 @@ public class Cheese extends PizzaD {
 
     @Override
     public PizzaD removeAnchovy() {
-        return new Cheese(p.removeAnchovy());
+        return remFn.forCheese(this.p);
     }
 
     @Override
     public PizzaD topAnchovyWithCheese() {
-        return new Cheese(p.topAnchovyWithCheese());
+        return topFn.forCheese(this.p);
     }
 
     @Override
     public PizzaD substituteAnchovyWithCheese() {
-        return new Cheese(p.substituteAnchovyWithCheese());
+        return subFn.forCheese(this.p);
     }}

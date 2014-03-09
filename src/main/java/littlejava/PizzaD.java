@@ -12,6 +12,12 @@ public abstract class PizzaD {
 
     public abstract PizzaD substituteAnchovyWithCheese();
 
+    protected RemAV remFn = new RemAV();
+
+    protected TopAwCV topFn = new TopAwCV();
+
+    protected SubAbCV subFn = new SubAbCV();
+
     @Override
     public String toString() {
         return this.getClass().getSimpleName() +

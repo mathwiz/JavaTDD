@@ -6,16 +6,16 @@ package littlejava;
 public class Crust extends PizzaD {
     @Override
     public PizzaD removeAnchovy() {
-        return new Crust();
+        return remFn.forCrust();
     }
 
     @Override
     public PizzaD substituteAnchovyWithCheese() {
-        return new Crust();
+        return subFn.forCrust();
     }
 
     @Override
     public PizzaD topAnchovyWithCheese() {
-        return new Crust();
+        return topFn.forCrust();
     }
 }

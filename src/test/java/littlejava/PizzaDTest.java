@@ -28,27 +28,31 @@ public class PizzaDTest {
     @Before
     public void setUp() throws Exception {
         test = testData();
-        System.out.println(test);
     }
 
     @Test
     public void testRemoveAnchovy() throws Exception {
-        PizzaD p = test;
-        System.out.println(p.removeAnchovy());
+        System.out.println("- testRemoveAnchovy");
+        System.out.println("*" + test);
+        System.out.println(" " + test.removeAnchovy());
         PizzaD p2 = new Anchovy(new Anchovy(new Crust()));
-        System.out.println(p2.removeAnchovy());
+        System.out.println("*" + p2);
+        System.out.println(" " + p2.removeAnchovy());
     }
 
     @Test
     public void testTopAnchovyWithCheese() throws Exception {
-        PizzaD p = test;
-        System.out.println(p.topAnchovyWithCheese());
-        System.out.println(p.removeAnchovy().topAnchovyWithCheese());
-        System.out.println(p.topAnchovyWithCheese().removeAnchovy());
+        System.out.println("- testTopAnchovyWithCheese");
+        System.out.println("*" + test);
+        System.out.println(" " + test.topAnchovyWithCheese());
+        System.out.println(" " + test.removeAnchovy().topAnchovyWithCheese());
+        System.out.println(" " + test.topAnchovyWithCheese().removeAnchovy());
     }
 
     @Test
     public void testSubstituteAnchovyWithCheese() throws Exception {
-        System.out.println(test.substituteAnchovyWithCheese());
+        System.out.println("- testSubstituteAnchovyWithCheese");
+        System.out.println("*" + test);
+        System.out.println(" " + test.substituteAnchovyWithCheese());
     }
 }

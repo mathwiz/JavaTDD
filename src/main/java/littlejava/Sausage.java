@@ -10,16 +10,16 @@ public class Sausage extends PizzaD {
 
     @Override
     public PizzaD removeAnchovy() {
-        return new Sausage(p.removeAnchovy());
+        return remFn.forSausage(this.p);
     }
 
     @Override
     public PizzaD topAnchovyWithCheese() {
-        return new Sausage(p.topAnchovyWithCheese());
+        return topFn.forSausage(this.p);
     }
 
     @Override
     public PizzaD substituteAnchovyWithCheese() {
-        return new Sausage(p.substituteAnchovyWithCheese());
+        return subFn.forSausage(this.p);
     }
 }

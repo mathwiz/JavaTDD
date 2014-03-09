@@ -10,16 +10,16 @@ public class Olive extends PizzaD {
 
     @Override
     public PizzaD removeAnchovy() {
-        return new Olive(p.removeAnchovy());
+        return remFn.forOlive(this.p);
     }
 
     @Override
     public PizzaD topAnchovyWithCheese() {
-        return new Olive(p.topAnchovyWithCheese());
+        return topFn.forOlive(this.p);
     }
 
     @Override
     public PizzaD substituteAnchovyWithCheese() {
-        return new Olive(p.substituteAnchovyWithCheese());
+        return subFn.forOlive(this.p);
     }
 }
