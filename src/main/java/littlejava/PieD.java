@@ -21,7 +21,6 @@ public abstract class PieD {
                                         new Top(new AnchovyFish(),
                                                 new Bot())))
                 );
-        System.out.println("Pie");
         System.out.println(p);
     }
 }

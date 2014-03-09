@@ -16,8 +16,8 @@ public class Top extends PieD {
     public String toString() {
         return "Top{" +
                 "t=" + t +
-                ", r=" + r +
-                '}';
+                ",\nr=" + r +
+                "}";
     }
 
     @Override
