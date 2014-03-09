@@ -7,7 +7,7 @@ package tdd.model;
  * Time: 10:14 AM
  * To change this template use File | Settings | File Templates.
  */
-public class GolfBall {
+public class GolfBall implements Equipment {
     private int compression;
     private String brand;
     private String model;
