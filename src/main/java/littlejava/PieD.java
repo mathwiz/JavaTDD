@@ -6,7 +6,11 @@ package littlejava;
 public abstract class PieD {
     protected RemAnchovyV raFn = new RemAnchovyV();
 
+    protected RemFishV rfFn = new RemFishV();
+
     public abstract PieD remA();
+
+    public abstract PieD remFish(FishD fishD);
 
     @Override
     public String toString() {

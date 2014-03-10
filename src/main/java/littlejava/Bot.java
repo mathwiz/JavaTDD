@@ -5,6 +5,11 @@ package littlejava;
  */
 public class Bot extends PieD {
     @Override
+    public PieD remFish(FishD fishD) {
+        return rfFn.forBot(fishD);
+    }
+
+    @Override
     public PieD remA() {
         return raFn.forBot();
     }

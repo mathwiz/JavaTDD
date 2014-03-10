@@ -24,4 +24,9 @@ public class Top extends PieD {
     public PieD remA() {
         return raFn.forTop(t, r);
     }
+
+    @Override
+    public PieD remFish(FishD fishD) {
+        return rfFn.forTop(t, r, fishD);
+    }
 }
