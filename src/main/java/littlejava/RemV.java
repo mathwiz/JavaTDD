@@ -24,10 +24,11 @@ public class RemV {
                                         new Top(new Long(1),
                                                 new Top(new TunaFish(),
                                                         new Top(new AnchovyFish(),
-                                                                new Bot()))))));
+                                                                new Top(new Double(2.3),
+                                                                        new Bot()))))))
+                );
         System.out.println("Before\n" + p);
-        PieD after = p.rem(new SalmonFish());
-//        after = after.rem(new Integer(42));
+        PieD after = p.rem(new TunaFish()).rem(new Integer(42));
         System.out.println("After\n" + after);
     }
 
