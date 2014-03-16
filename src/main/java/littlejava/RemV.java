@@ -24,9 +24,7 @@ public class RemV {
                                         new Top(new Long(1),
                                                 new Top(new TunaFish(),
                                                         new Top(new AnchovyFish(),
-                                                                new Top(new Double(2.3),
-                                                                        new Bot()))))))
-                );
+                                                                new Bot()))))));
         System.out.println("Before\n" + p);
         PieD after = p.rem(new SalmonFish());
 //        after = after.rem(new Integer(42));
