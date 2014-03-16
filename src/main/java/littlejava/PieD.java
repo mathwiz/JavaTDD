@@ -14,10 +14,13 @@ public abstract class PieD {
 
     protected SubstV substFn = new SubstV();
 
+    @Deprecated
     public abstract PieD remA();
 
+    @Deprecated
     public abstract PieD remFish(FishD fishD);
 
+    @Deprecated
     public abstract PieD remInt(Integer i);
 
     public abstract PieD rem(Object o);
