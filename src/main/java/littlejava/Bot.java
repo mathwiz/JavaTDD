@@ -23,4 +23,9 @@ public class Bot extends PieD {
     public PieD rem(Object o) {
         return rFn.forBot(o);
     }
+
+    @Override
+    public PieD subst(Object n, Object o) {
+        return substFn.forBot(n, o);
+    }
 }

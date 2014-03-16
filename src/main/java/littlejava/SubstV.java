@@ -3,30 +3,17 @@ package littlejava;
 /**
  * Created by Yohan on 3/9/14.
  */
-public abstract class PieD {
-    protected RemAnchovyV raFn = new RemAnchovyV();
+public class SubstV {
+    public PieD forBot(Object n, Object o) {
+        return new Bot();
+    }
 
-    protected RemFishV rfFn = new RemFishV();
-
-    protected RemIntV riFn = new RemIntV();
-
-    protected RemV rFn = new RemV();
-
-    protected SubstV substFn = new SubstV();
-
-    public abstract PieD remA();
-
-    public abstract PieD remFish(FishD fishD);
-
-    public abstract PieD remInt(Integer i);
-
-    public abstract PieD rem(Object o);
-
-    public abstract PieD subst(Object n, Object o);
-
-    @Override
-    public String toString() {
-        return this.getClass().getSimpleName() + "";
+    public PieD forTop(Object t, PieD r, Object n, Object o) {
+        if (o.equals(t)) {
+            return new Top(n, r.subst(n, o));
+        } else {
+            return new Top(t, r.subst(n, o));
+        }
     }
 
     public static void main(String[] args) {
@@ -40,6 +27,9 @@ public abstract class PieD {
                                                                 new Top(new Double(2.3),
                                                                         new Bot()))))))
                 );
-        System.out.println(p);
+        System.out.println("Before\n" + p);
+        PieD after = p.subst(new Character('4'), new Integer(42)).subst(new Zero(), new AnchovyFish());
+        System.out.println("After\n" + after);
     }
+
 }

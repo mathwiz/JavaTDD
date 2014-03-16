@@ -39,4 +39,9 @@ public class Top extends PieD {
     public PieD remInt(Integer i) {
         return riFn.forTop(t, r, i);
     }
+
+    @Override
+    public PieD subst(Object n, Object o) {
+        return substFn.forTop(t, r, n, o);
+    }
 }
