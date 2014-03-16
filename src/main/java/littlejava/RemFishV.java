@@ -15,4 +15,18 @@ public class RemFishV {
             return new Top(t, r.remFish(fishD));
         }
     }
+
+    public static void main(String[] args) {
+        PieD p =
+                new Top(new SalmonFish(),
+                        new Top(new AnchovyFish(),
+                                new Top(new TunaFish(),
+                                        new Top(new AnchovyFish(),
+                                                new Bot())))
+                );
+        System.out.println("Before\n" + p);
+        PieD after = p.remFish(new AnchovyFish());
+        System.out.println("After\n" + after);
+    }
+
 }

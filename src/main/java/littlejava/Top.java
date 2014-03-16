@@ -32,11 +32,11 @@ public class Top extends PieD {
 
     @Override
     public PieD rem(Object o) {
-        return null;
+        return rFn.forTop(t, r, o);
     }
 
     @Override
     public PieD remInt(Integer i) {
-        return null;
+        return riFn.forTop(t, r, i);
     }
 }

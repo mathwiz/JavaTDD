@@ -15,4 +15,22 @@ public class RemV {
             return new Top(t, r.rem(o));
         }
     }
+
+    public static void main(String[] args) {
+        PieD p =
+                new Top(new SalmonFish(),
+                        new Top(new Integer(42),
+                                new Top(new AnchovyFish(),
+                                        new Top(new Long(1),
+                                                new Top(new TunaFish(),
+                                                        new Top(new AnchovyFish(),
+                                                                new Top(new Double(2.3),
+                                                                        new Bot()))))))
+                );
+        System.out.println("Before\n" + p);
+        PieD after = p.rem(new SalmonFish());
+//        after = after.rem(new Integer(42));
+        System.out.println("After\n" + after);
+    }
+
 }

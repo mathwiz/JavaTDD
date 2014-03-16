@@ -8,6 +8,10 @@ public abstract class PieD {
 
     protected RemFishV rfFn = new RemFishV();
 
+    protected RemIntV riFn = new RemIntV();
+
+    protected RemV rFn = new RemV();
+
     public abstract PieD remA();
 
     public abstract PieD remFish(FishD fishD);
@@ -24,10 +28,13 @@ public abstract class PieD {
     public static void main(String[] args) {
         PieD p =
                 new Top(new SalmonFish(),
-                        new Top(new AnchovyFish(),
-                                new Top(new TunaFish(),
-                                        new Top(new AnchovyFish(),
-                                                new Bot())))
+                        new Top(new Integer(42),
+                                new Top(new AnchovyFish(),
+                                        new Top(new Long(1),
+                                                new Top(new TunaFish(),
+                                                        new Top(new AnchovyFish(),
+                                                                new Top(new Double(2.3),
+                                                                        new Bot()))))))
                 );
         System.out.println(p);
     }

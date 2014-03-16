@@ -15,4 +15,18 @@ public class RemIntV {
             return new Top(t, r.remInt(i));
         }
     }
+
+    public static void main(String[] args) {
+        PieD p =
+                new Top(new Integer(1),
+                        new Top(new Integer(2),
+                                new Top(new Integer(3),
+                                        new Top(new Integer(2),
+                                                new Bot())))
+                );
+        System.out.println("Before\n" + p);
+        PieD after = p.remInt(new Integer(2));
+        System.out.println("After\n" + after);
+    }
+
 }
