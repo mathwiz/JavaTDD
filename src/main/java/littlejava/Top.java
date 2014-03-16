@@ -29,4 +29,14 @@ public class Top extends PieD {
     public PieD remFish(FishD fishD) {
         return rfFn.forTop(t, r, fishD);
     }
+
+    @Override
+    public PieD rem(Object o) {
+        return null;
+    }
+
+    @Override
+    public PieD remInt(Integer i) {
+        return null;
+    }
 }

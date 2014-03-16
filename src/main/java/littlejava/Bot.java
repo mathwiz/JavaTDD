@@ -13,4 +13,14 @@ public class Bot extends PieD {
     public PieD remA() {
         return raFn.forBot();
     }
+
+    @Override
+    public PieD remInt(Integer i) {
+        return null;
+    }
+
+    @Override
+    public PieD rem(Object o) {
+        return null;
+    }
 }

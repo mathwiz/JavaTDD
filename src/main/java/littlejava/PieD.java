@@ -12,6 +12,10 @@ public abstract class PieD {
 
     public abstract PieD remFish(FishD fishD);
 
+    public abstract PieD remInt(Integer i);
+
+    public abstract PieD rem(Object o);
+
     @Override
     public String toString() {
         return this.getClass().getSimpleName() + "";
