@@ -8,4 +8,9 @@ public class Zero extends NumD {
     public String toString() {
         return "Zero{}";
     }
+
+    @Override
+    public boolean equals(Object o) {
+        return o instanceof Zero;
+    }
 }
