@@ -1,6 +1,6 @@
 package algorithms.sorting;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import tdd.util.FileIn;
@@ -34,7 +34,7 @@ public class SortingAlgorithmTest extends SortTest {
     public void testInsertionSort() throws Exception {
         System.out.println("Insertion Sort");
         Assert.assertFalse(Sorts.isSorted(a));
-        Sorts.sort(a, new IterationPrintingSort(new InsertionSort<String>()));
+        Sorts.sort(a, new IterationPrintingSort<String>(new InsertionSort<String>()));
         Assert.assertTrue(Sorts.isSorted(a));
     }
 
@@ -42,7 +42,7 @@ public class SortingAlgorithmTest extends SortTest {
     public void testMergeSortTopDown() throws Exception {
         System.out.println("Top Down Mergesort");
         Assert.assertFalse(Sorts.isSorted(a));
-        Sorts.sort(a, new IterationPrintingSort(new MergeTDSort<String>()));
+        Sorts.sort(a, new IterationPrintingSort<String>(new MergeTDSort<String>()));
         Assert.assertTrue(Sorts.isSorted(a));
     }
 
@@ -50,7 +50,7 @@ public class SortingAlgorithmTest extends SortTest {
     public void testMergeSortBottomUp() throws Exception {
         System.out.println("Bottom Up Mergesort");
         Assert.assertFalse(Sorts.isSorted(a));
-        Sorts.sort(a, new IterationPrintingSort(new MergeBUSort<String>()));
+        Sorts.sort(a, new IterationPrintingSort<String>(new MergeBUSort<String>()));
         Assert.assertTrue(Sorts.isSorted(a));
     }
 
@@ -58,7 +58,7 @@ public class SortingAlgorithmTest extends SortTest {
     public void testQuicksort() throws Exception {
         System.out.println("Quicksort");
         Assert.assertFalse(Sorts.isSorted(a));
-        Sorts.sort(a, new IterationPrintingSort(new QuickSort<String>()));
+        Sorts.sort(a, new IterationPrintingSort<String>(new QuickSort<String>()));
         Assert.assertTrue(Sorts.isSorted(a));
     }
 }

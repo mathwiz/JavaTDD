@@ -26,7 +26,7 @@ public class Zero extends NumD {
                                                                         new Bot()))))))
                 );
         System.out.println("Before\n" + p);
-        PieD after = p.rem(new Zero()).rem(new Double(2.3)).rem(new Integer(42)).rem(new SalmonFish());
+        PieD after = p.rem(new RemV(),new Zero()).rem(new RemV(),new Double(2.3)).rem(new RemV(),new Integer(42)).rem(new RemV(),new SalmonFish());
         System.out.println("After\n" + after);
     }
 }

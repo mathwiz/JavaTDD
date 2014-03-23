@@ -38,7 +38,7 @@ public class OneMoreThan extends NumD {
                                                                         new Bot()))))))
                 );
         System.out.println("Before\n" + p);
-        PieD after = p.rem(new OneMoreThan(new Zero())).rem(new Zero());
+        PieD after = p.rem(new RemV(), new OneMoreThan(new Zero())).rem(new RemV(), new Zero());
         System.out.println("After\n" + after);
     }
 

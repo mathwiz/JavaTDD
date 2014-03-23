@@ -31,7 +31,7 @@ public class Top extends PieD {
     }
 
     @Override
-    public PieD rem(Object o) {
+    public PieD rem(RemV rFn, Object o) {
         return rFn.forTop(t, r, o);
     }
 
@@ -41,7 +41,27 @@ public class Top extends PieD {
     }
 
     @Override
-    public PieD subst(Object n, Object o) {
+    public PieD subst(SubstV substFn, Object n, Object o) {
         return substFn.forTop(t, r, n, o);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Top top = (Top) o;
+
+        if (r != null ? !r.equals(top.r) : top.r != null) return false;
+        if (t != null ? !t.equals(top.t) : top.t != null) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = t != null ? t.hashCode() : 0;
+        result = 31 * result + (r != null ? r.hashCode() : 0);
+        return result;
     }
 }

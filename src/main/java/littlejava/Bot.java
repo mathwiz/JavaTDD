@@ -20,12 +20,17 @@ public class Bot extends PieD {
     }
 
     @Override
-    public PieD rem(Object o) {
+    public PieD rem(RemV rFn,Object o) {
         return rFn.forBot(o);
     }
 
     @Override
-    public PieD subst(Object n, Object o) {
+    public PieD subst(SubstV substFn, Object n, Object o) {
         return substFn.forBot(n, o);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        return o instanceof Bot;
     }
 }

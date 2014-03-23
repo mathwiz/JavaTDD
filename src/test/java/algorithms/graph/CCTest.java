@@ -2,7 +2,7 @@ package algorithms.graph;
 
 import algorithms.data.LinkedListQueue;
 import algorithms.data.Queue;
-import junit.framework.Assert;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 

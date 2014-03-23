@@ -10,9 +10,9 @@ public class SubstV {
 
     public PieD forTop(Object t, PieD r, Object n, Object o) {
         if (o.equals(t)) {
-            return new Top(n, r.subst(n, o));
+            return new Top(n, r.subst(this, n, o));
         } else {
-            return new Top(t, r.subst(n, o));
+            return new Top(t, r.subst(this, n, o));
         }
     }
 
@@ -28,7 +28,7 @@ public class SubstV {
                                                                         new Bot()))))))
                 );
         System.out.println("Before\n" + p);
-        PieD after = p.subst(new Character('4'), new Integer(42)).subst(new Zero(), new AnchovyFish());
+        PieD after = p.subst(new SubstV(), new Character('4'), new Integer(42)).subst(new SubstV(), new Zero(), new AnchovyFish());
         System.out.println("After\n" + after);
     }
 

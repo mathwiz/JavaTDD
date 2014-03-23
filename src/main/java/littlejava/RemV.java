@@ -10,9 +10,9 @@ public class RemV {
 
     public PieD forTop(Object t, PieD r, Object o) {
         if (o.equals(t)) {
-            return r.rem(o);
+            return r.rem(this, o);
         } else {
-            return new Top(t, r.rem(o));
+            return new Top(t, r.rem(this, o));
         }
     }
 
@@ -28,7 +28,7 @@ public class RemV {
                                                                         new Bot()))))))
                 );
         System.out.println("Before\n" + p);
-        PieD after = p.rem(new TunaFish()).rem(new Integer(42));
+        PieD after = p.rem(new RemV(), new TunaFish()).rem(new RemV(), new Integer(42));
         System.out.println("After\n" + after);
     }
 
