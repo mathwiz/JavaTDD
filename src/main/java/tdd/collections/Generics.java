@@ -1,12 +1,21 @@
 package tdd.collections;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 /**
  * Created by Yohan on 2/18/14.
  */
 public class Generics {
+    public static double sum(Collection<? extends Number> nums) {
+        double s = 0.0;
+        for (Number it : nums) {
+            s += it.doubleValue();
+        }
+        return s;
+    }
+
     public static void show1(List<Number> nums) {
         for (Number n : nums) {
             System.out.println(n);
