@@ -16,6 +16,23 @@ public class Generics {
         return s;
     }
 
+    public static void count(Collection<? super Integer> ints, int n) {
+        for (int i = 0; i < n; i++) {
+            ints.add(i);
+        }
+    }
+
+    public static double sumCount(Collection<Number> nums, int n) {
+        count(nums, n);
+        return sum(nums);
+    }
+
+    public static <T> void copy(List<? super T> dest, List<? extends T> src) {
+        for (int i = 0; i < src.size(); i++) {
+            dest.set(i, src.get(i));
+        }
+    }
+
     public static void show1(List<Number> nums) {
         for (Number n : nums) {
             System.out.println(n);
