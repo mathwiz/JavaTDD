@@ -29,4 +29,14 @@ public class GenericsTest {
         System.out.println("Sum of nums = " + d);
         Assert.assertEquals(3.0, d, .01);
     }
+    
+    @Test
+    public void testPut2() throws Exception {
+        List<String> a = new ArrayList<>();
+        List<? extends String> b = new ArrayList<String>();
+        String s = "one";
+        a.add(s);
+//        b.add(s); //not allowed
+        Assert.assertEquals(1, a.size());
+    }
 }
