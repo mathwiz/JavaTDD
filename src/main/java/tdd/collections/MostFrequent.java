@@ -15,7 +15,7 @@ public class MostFrequent {
     }
 
     public static void main(String[] args) {
-        List<Integer> vals = Arrays.asList(-2, -3, -1, -2, -1, -2, -3, -1, -3, -1);
+        List<Integer> vals = Arrays.asList(-2, -3, -1, -2, -1, -2, -3, -1, -3);
         MostFrequent mf = new MostFrequent(vals);
         System.out.println(String.format("Most frequent element is %s", mf.find1()));
         System.out.println(String.format("Most frequent element is %s", mf.find2()));
