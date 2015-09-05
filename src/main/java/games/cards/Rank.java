@@ -23,5 +23,11 @@ public enum Rank {
 
     public static void main(String[] args) {
         System.out.println(TWO.getSymbol().compareTo(THREE.getSymbol()));
+        System.out.println(TWO.getSymbol().hashCode());
+        System.out.println(THREE.getSymbol().hashCode());
+        System.out.println(FOUR.getSymbol().hashCode());
+        System.out.println(NINE.getSymbol().hashCode());
+        System.out.println(TEN.getSymbol().hashCode());
+        System.out.println(JACK.getSymbol().hashCode());
     }
 }
