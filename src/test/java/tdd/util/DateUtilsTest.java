@@ -30,6 +30,7 @@ public class DateUtilsTest {
     @Test
     public void testNextDay() {
         System.out.println(DateUtils.nextDay("2014-11-30"));
+        System.out.println(DateUtils.nextDay("2014-12-31"));
     }
 
     @Test
