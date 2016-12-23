@@ -6,11 +6,7 @@ package algorithms.data;
 public class LinkedListStack<E> extends LinkedListDataStructure<E> implements Stack<E> {
 
     public void push(E item) {
-        Node<E> oldFirst = first;
-        first = new Node<E>();
-        first.setItem(item);
-        first.setNext(oldFirst);
-        n++;
+        add(item);
     }
 
     public E pop() {

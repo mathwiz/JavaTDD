@@ -39,4 +39,12 @@ public abstract class LinkedListDataStructure<E> implements Collection<E> {
             }
         };
     }
+
+    public void add(E item) {
+        Node<E> oldFirst = first;
+        first = new Node<E>();
+        first.setItem(item);
+        first.setNext(oldFirst);
+        n++;
+    }
 }
