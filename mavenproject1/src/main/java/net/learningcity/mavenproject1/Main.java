@@ -11,6 +11,6 @@ package net.learningcity.mavenproject1;
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Started net.learningcity.mavenproject1.Main");
+        System.out.println("Main");
     }
 }
