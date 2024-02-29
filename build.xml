@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="JavaTDD" default="compile" basedir=".">
+<project name="JavaTDD" default="runclass" basedir=".">
 
 	<property name="src.dir" location="src/main" />
 	<property name="test.dir" location="src/test" />
