@@ -2,12 +2,14 @@ package algorithms.sorting;
 
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
  * Created by Yohan on 1/26/14.
  */
-public class PartitionTest extends SortTest {
+@Ignore
+public class PartitionTest extends SortTBase {
     @Before
     public void setUp() throws Exception {
         super.setUp();

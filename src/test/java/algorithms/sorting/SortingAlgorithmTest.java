@@ -8,7 +8,7 @@ import tdd.util.FileIn;
 /**
  * Created by Yohan on 1/26/14.
  */
-public class SortingAlgorithmTest extends SortTest {
+public class SortingAlgorithmTest extends SortTBase {
     @Before
     public void setUp() throws Exception {
         super.setUp();

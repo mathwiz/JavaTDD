@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by Yohan on 1/26/14.
  */
-public abstract class SortTest {
+public abstract class SortTBase {
     FileIn in;
     Comparable[] a;
 

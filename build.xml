@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <project name="JavaTDD" default="compile" basedir=".">
 
-	<property name="src.dir" location="src/main/java" />
-	<property name="test.dir" location="src/test/java" />
+	<property name="src.dir" location="src/main" />
+	<property name="test.dir" location="src/test" />
 	<property name="bin.dir" location="bin" />
 	<property name="lib.dir" location="lib" />
 	<property name="dist.dir" location="dist" />
@@ -36,6 +36,7 @@
           <junit fork="true">
             <classpath>
               <pathelement location="${bin.dir}" />    
+              <pathelement location="${test.dir}/resources"/>
               <pathelement location="${lib.dir}/${junit.jar}"/>
               <pathelement location="${lib.dir}/${hamcrest.jar}"/>
             </classpath>    
@@ -63,11 +64,11 @@
 	</target>
 
 	<target name="compile" depends="init" description="compile the Java source code to class files">
-	  <javac srcdir="${src.dir}" destdir="${bin.dir}" classpathref="classpath" includeantruntime="false" />
+	  <javac srcdir="${src.dir}/java" destdir="${bin.dir}" classpathref="classpath" includeantruntime="false" />
 	</target>
 
         <target name="compileTest" depends="compile" description="compile jUnit Test cases ">
-          <javac srcdir="${test.dir}" destdir="${bin.dir}" classpathref="classpath" includeantruntime="false" nowarn="yes" debug="true" />
+          <javac srcdir="${test.dir}/java" destdir="${bin.dir}" classpathref="classpath" includeantruntime="false" nowarn="yes" debug="true" />
         </target>
 
         <target name="jar" depends="clean,compile">
