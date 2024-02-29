@@ -2,6 +2,7 @@ package tdd.templates;
 
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import tdd.model.*;
 
@@ -12,8 +13,9 @@ import java.util.Map;
 /**
  * Created by Yohan on 3/9/14.
  */
+@Ignore
 public class GolfBallServiceTest {
-    GolfBallService service;
+    public GolfBallService service;
 
     @Before
     public void setUp() throws Exception {

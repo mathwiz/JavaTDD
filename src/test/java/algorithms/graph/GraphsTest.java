@@ -7,7 +7,7 @@ import org.junit.Test;
 /**
  * Created by yohanlee on 1/18/14.
  */
-public class GraphsTest extends GraphTest {
+public class GraphsTest extends GraphTBase {
 
     @Test
     public void testGetSizes() throws Exception {

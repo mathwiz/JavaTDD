@@ -9,7 +9,7 @@ import org.junit.Test;
 /**
  * Created by Yohan on 1/29/14.
  */
-public class CCTest extends GraphTest {
+public class CCTest extends GraphTBase {
     CC cc;
 
     @Before

@@ -2,16 +2,21 @@
 <project name="JavaTDD" default="compile" basedir=".">
 
 	<property name="src.dir" location="src/main/java" />
+	<property name="test.dir" location="src/test/java" />
 	<property name="bin.dir" location="bin" />
 	<property name="lib.dir" location="lib" />
 	<property name="dist.dir" location="dist" />
+	<property name="junit.jar" value="junit-4.13.2.jar" />
+	<property name="hamcrest.jar" value="hamcrest-core-1.3.jar" />
 
 	<path id="classpath">
 	  <fileset dir="${lib.dir}" includes="**/*.jar" />
 	</path>
 
-        <target name="name">
+        <target name="names">
           <echo>${ant.project.name}</echo>
+          <echo>${junit.jar}</echo>
+          <echo>${hamcrest.jar}</echo>
         </target>
 
         <target name="runclass">
@@ -25,6 +30,22 @@
 
         <target name="test">
           <java dir="${bin.dir}" fork="true" classname="coil.Hello" />
+        </target>
+
+        <target name="junit" depends="compileTest">
+          <junit fork="true">
+            <classpath>
+              <pathelement location="${bin.dir}" />    
+              <pathelement location="${lib.dir}/${junit.jar}"/>
+              <pathelement location="${lib.dir}/${hamcrest.jar}"/>
+            </classpath>    
+            <batchtest>
+              <fileset dir="${bin.dir}">
+                <include name="**/*Test*" />
+              </fileset>
+            </batchtest>
+            <formatter type="brief" usefile="false"/>
+          </junit>
         </target>
 
 	<target name="init">
@@ -44,6 +65,10 @@
 	<target name="compile" depends="init" description="compile the Java source code to class files">
 	  <javac srcdir="${src.dir}" destdir="${bin.dir}" classpathref="classpath" includeantruntime="false" />
 	</target>
+
+        <target name="compileTest" depends="compile" description="compile jUnit Test cases ">
+          <javac srcdir="${test.dir}" destdir="${bin.dir}" classpathref="classpath" includeantruntime="false" nowarn="yes" debug="true" />
+        </target>
 
         <target name="jar" depends="clean,compile">
           <mkdir dir="${dist.dir}" />

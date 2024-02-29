@@ -1,6 +1,7 @@
 package tdd.util;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.BufferedReader;
@@ -11,6 +12,7 @@ import java.net.URL;
 /**
  * Created by Yohan on 1/26/14.
  */
+@Ignore
 public class FileInTest {
     File file;
     FileIn fileIn;

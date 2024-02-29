@@ -6,7 +6,7 @@ import org.junit.Test;
 /**
  * Created by Yohan on 1/25/14.
  */
-public class BreadthFirstPathsTest extends GraphTest {
+public class BreadthFirstPathsTest extends GraphTBase {
     int source;
 
     @Override

@@ -7,7 +7,7 @@ import org.junit.Test;
 /**
  * Created by yohanlee on 1/18/14.
  */
-public abstract class GraphTest {
+public abstract class GraphTBase {
     private Graph g;
 
     @Before

@@ -6,7 +6,7 @@ import org.junit.Test;
 /**
  * Created by Yohan on 1/19/14.
  */
-public class DepthFirstSearchTest extends GraphTest {
+public class DepthFirstSearchTest extends GraphTBase {
     @Before
     public void setUp() throws Exception {
         super.setUp();
