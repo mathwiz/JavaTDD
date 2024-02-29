@@ -1,6 +1,6 @@
 package headfirst.combined.djview;
 
-public class HeartTestDrive {
+public class HeartDriver {
 
     public static void main (String[] args) {
         HeartModel heartModel = new HeartModel();

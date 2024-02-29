@@ -29,7 +29,7 @@
         </target>
 
         <target name="test">
-          <java dir="${bin.dir}" fork="true" classname="coil.Hello" />
+          <java dir="${bin.dir}" fork="true" classname="headfirst.combined.djview.HeartDriver" />
         </target>
 
         <target name="junit" depends="compileTest">

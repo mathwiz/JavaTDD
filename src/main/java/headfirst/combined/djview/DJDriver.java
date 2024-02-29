@@ -1,6 +1,6 @@
 package headfirst.combined.djview;
 
-public class DJTestDrive {
+public class DJDriver {
 
     public static void main (String[] args) {
         BeatModelInterface model = new BeatModel();
