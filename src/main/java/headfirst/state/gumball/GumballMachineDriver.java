@@ -1,6 +1,6 @@
 package headfirst.state.gumball;
 
-public class GumballMachineTestDrive {
+public class GumballMachineDriver {
 
     public static void main(String[] args) {
         GumballMachine gumballMachine = new GumballMachine(5);
