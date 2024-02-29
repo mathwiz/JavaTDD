@@ -13,9 +13,9 @@ import java.util.Map;
 /**
  * Created by Yohan on 3/9/14.
  */
-@Ignore
+
 public class GolfBallServiceTest {
-    public GolfBallService service;
+    GolfBallService service;
 
     @Before
     public void setUp() throws Exception {

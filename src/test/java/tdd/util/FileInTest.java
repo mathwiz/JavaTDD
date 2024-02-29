@@ -12,7 +12,7 @@ import java.net.URL;
 /**
  * Created by Yohan on 1/26/14.
  */
-@Ignore
+
 public class FileInTest {
     File file;
     FileIn fileIn;

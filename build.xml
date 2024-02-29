@@ -42,7 +42,7 @@
             </classpath>    
             <batchtest>
               <fileset dir="${bin.dir}">
-                <include name="**/*Test*" />
+                <include name="**/*Test.class" />
               </fileset>
             </batchtest>
             <formatter type="brief" usefile="false"/>
