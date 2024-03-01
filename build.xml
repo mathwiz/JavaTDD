@@ -75,7 +75,7 @@
           <mkdir dir="${dist.dir}" />
           <jar destfile="${dist.dir}/${ant.project.name}.jar" basedir="${bin.dir}">
             <manifest>
-              <attribute name="Main-Class" value="coil.Hello" />
+              <attribute name="Main-Class" value="headfirst.combined.djview.HeartDriver" />
             </manifest>
           </jar>
         </target>
