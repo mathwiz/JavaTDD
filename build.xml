@@ -29,12 +29,10 @@
         </target>
 
         <target name="run-class">
-           <java dir="${bin.dir}" fork="true" classname="${class}">
+           <java dir="${bin.dir}" fork="true" classpathref="classpath" classname="${class}">
               <arg value="${arg0}"/>
               <arg value="${arg1}"/>
               <arg value="${arg2}"/>
-              <classpath>
-              </classpath>
            </java>
         </target>
 
