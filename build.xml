@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="JavaTDD" default="runclass" basedir=".">
+<project name="JavaTDD" default="run-class" basedir=".">
 
 	<property name="src.dir" location="src/main" />
 	<property name="test.dir" location="src/test" />
@@ -19,13 +19,23 @@
           <echo>${hamcrest.jar}</echo>
         </target>
 
-        <target name="runclass">
+        <target name="exec-class">
            <exec executable="java" dir="${bin.dir}">
               <arg value="${class}"/>
+              <arg value="${arg0}"/>
               <arg value="${arg1}"/>
               <arg value="${arg2}"/>
-              <arg value="${arg3}"/>
            </exec>
+        </target>
+
+        <target name="run-class">
+           <java dir="${bin.dir}" fork="true" classname="${class}">
+              <arg value="${arg0}"/>
+              <arg value="${arg1}"/>
+              <arg value="${arg2}"/>
+              <classpath>
+              </classpath>
+           </java>
         </target>
 
         <target name="test">
