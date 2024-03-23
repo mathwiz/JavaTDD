@@ -18,6 +18,10 @@ public abstract class PizzaD {
 
     protected SubAbCV subFn = new SubAbCV();
 
+    public static void println(Object o) {
+        System.out.println("PizzaD: " + o);
+    }
+
     @Override
     public String toString() {
         return this.getClass().getSimpleName() +
@@ -26,7 +30,7 @@ public abstract class PizzaD {
 
     public static void main(String[] args) {
         PizzaD p1 = new Cheese(new Sausage(new Olive(new Anchovy(new Crust()))));
-        System.out.println(p1);
-        System.out.println(p1.topAnchovyWithCheese());
+        println(p1);
+        println(p1.topAnchovyWithCheese());
     }
 }

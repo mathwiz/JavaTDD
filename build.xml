@@ -28,7 +28,7 @@
            </exec>
         </target>
 
-        <target name="run-class">
+        <target name="run-class" depends="compile">
            <java dir="${bin.dir}" fork="true" classname="${class}">
               <arg value="${arg0}"/>
               <arg value="${arg1}"/>
