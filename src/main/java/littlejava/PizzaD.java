@@ -19,7 +19,7 @@ public abstract class PizzaD {
     protected SubAbCV subFn = new SubAbCV();
 
     public static void println(Object o) {
-        System.out.println("PizzaD: " + o);
+        System.out.println(o);
     }
 
     @Override
