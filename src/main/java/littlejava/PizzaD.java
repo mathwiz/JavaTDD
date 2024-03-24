@@ -20,10 +20,14 @@ public abstract class PizzaD {
 
     protected SubAbCV subFn = new SubAbCV();
 
+    public void run() {
+        println(this.toString());
+    }
+
     @Override
     public String toString() {
         return this.getClass().getSimpleName() +
-                (p == null ? "" : " " + p);
+                (p == null ? "" : " (" + p + ")");
     }
 
     public static void main(String[] args) {
