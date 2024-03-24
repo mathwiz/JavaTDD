@@ -1,5 +1,7 @@
 package littlejava;
 
+import static littlejava.Helpers.*;
+
 /**
  * Created by Yohan on 2/22/14.
  */
@@ -17,10 +19,6 @@ public abstract class PizzaD {
     protected TopAwCV topFn = new TopAwCV();
 
     protected SubAbCV subFn = new SubAbCV();
-
-    public static void println(Object o) {
-        System.out.println(o);
-    }
 
     @Override
     public String toString() {
