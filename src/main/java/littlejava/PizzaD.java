@@ -27,7 +27,7 @@ public abstract class PizzaD {
     @Override
     public String toString() {
         return this.getClass().getSimpleName() +
-                (p == null ? "" : " (" + p + ")");
+                (p == null ? "()" : " (" + p + ")");
     }
 
     public static void main(String[] args) {

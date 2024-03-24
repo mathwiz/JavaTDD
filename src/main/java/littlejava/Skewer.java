@@ -14,8 +14,4 @@ public class Skewer extends ShishD {
         return ivFn.forSkewer();
     }
 
-    @Override
-    public String toString() {
-        return "Skewer{}";
-    }
 }
