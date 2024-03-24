@@ -1,6 +1,6 @@
 package littlejava;
 
-import static littlejava.Helpers.println;
+import static littlejava.Helpers.*;
 
 /**
  * Created by Yohan on 1/18/14.
@@ -25,19 +25,16 @@ public abstract class ShishD {
         return String.format("onlyOnions: %s, isVegetarian: %s", onlyOnions(), isVegetarian());
     }
 
+    public static void showIt(ShishD shish) {
+        print(shish);
+        println(" is " + shish.toPropertiesString());
+    }
+
     public static void main(String[] args) {
-        ShishD shish = new Onion(new Lamb(new Onion(new Skewer())));
-        println(shish);
-        println(shish.toPropertiesString());
-        shish = new Onion(new Onion(new Onion(new Skewer())));
-        println(shish);
-        println(shish.toPropertiesString());
-        shish = new Tomato(new Tomato(new Onion(new Skewer())));
-        println(shish);
-        println(shish.toPropertiesString());
-        shish = new Onion(new Skewer());
-        println(shish);
-        println(shish.toPropertiesString());
+        showIt( new Onion(new Lamb(new Onion(new Skewer()))) );
+        showIt( new Onion(new Onion(new Onion(new Skewer()))) );
+        showIt( new Tomato(new Tomato(new Onion(new Skewer()))) );
+        showIt( new Onion(new Skewer()) );
     }
 
 }
