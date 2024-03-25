@@ -11,7 +11,7 @@ public abstract class Main {
         }
 
         Class type = new Type(args[0]).value();
-        Class[] types = { type };
+
         Object instance = null;
         String[] classes = new Names(args[1]).value();
 
@@ -19,10 +19,9 @@ public abstract class Main {
             String className = classes[i];
             Class cls = new Type(className).value();
             if (i==0) {
-                instance = cls.getConstructor().newInstance();
+                instance = new Instance(cls).value();
             } else {
-                Object[] parameters = { instance }; // make previous instance the argument
-                instance = cls.getConstructor(types).newInstance(parameters);
+                instance = new Instance(cls, new Object[] { instance }, new Class[] { type }).value();
             }
         }
 
@@ -32,6 +31,17 @@ public abstract class Main {
         }
     }
 
+}
+
+class Instance {
+    final Object obj;
+    Instance(Class cls) throws Exception { 
+        obj = cls.getConstructor().newInstance(); 
+    }
+    Instance(Class cls, Object[] params, Class[] paramTypes) throws Exception { 
+        obj = cls.getConstructor(paramTypes).newInstance(params);
+    }
+    Object value() { return obj; }
 }
 
 class Names {
