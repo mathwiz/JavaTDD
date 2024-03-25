@@ -12,19 +12,16 @@ public abstract class Main {
 
         Class type = new Type(args[0]).value();
         Class[] types = { type };
-        println(types);
         Object instance = null;
-
         String[] classes = new Names(args[1]).value();
 
         for(int i=0; i<classes.length; i++) {
             String className = classes[i];
             Class cls = new Type(className).value();
-            println(cls);
             if (i==0) {
                 instance = cls.getConstructor().newInstance();
             } else {
-                Object[] parameters = { instance };
+                Object[] parameters = { instance }; // make previous instance the argument
                 instance = cls.getConstructor(types).newInstance(parameters);
             }
         }
