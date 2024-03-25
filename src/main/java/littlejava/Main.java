@@ -5,24 +5,28 @@ import static littlejava.Helpers.*;
 public abstract class Main {
     public static void main(String[] args) {
         try {
-        Class root = Class.forName(args[0]);
-        Object rootObj = root.getDeclaredConstructor().newInstance();
-
         int params = args.length;
         for(int i=0; i<params; i++) {
             println(args[i]);
         }
+
+        Class type = new Type(args[0]).value();
+        Class[] types = { type };
+        println(types);
         Object instance = null;
-        if (!"${arg1}".equals(args[1])) {
-            Class next = Class.forName(args[1]);
-            println(next);
-            Class[] types = {  };
-            Object[] parameters = { rootObj };
-            instance = next.getConstructor(types).newInstance(parameters);
-        } else if (!"${arg2}".equals(args[2])) {
-        } else {
-            println("wha?");
-            instance = rootObj;
+
+        String[] classes = new Names(args[1]).value();
+
+        for(int i=0; i<classes.length; i++) {
+            String className = classes[i];
+            Class cls = new Type(className).value();
+            println(cls);
+            if (i==0) {
+                instance = cls.getConstructor().newInstance();
+            } else {
+                Object[] parameters = { instance };
+                instance = cls.getConstructor(types).newInstance(parameters);
+            }
         }
 
         println(instance);
@@ -31,4 +35,20 @@ public abstract class Main {
         }
     }
 
+}
+
+class Names {
+    final String[] names;
+    Names(String s) { names = parseArg(s, ":"); }
+    String[] value() { return names; }
+}
+
+class Type {
+    final String packName = "littlejava";
+    final Class type;
+    Type(String name) throws Exception {
+        type = Class.forName(packName + "." + name);
+    }
+
+    Class value() { return type; }
 }
