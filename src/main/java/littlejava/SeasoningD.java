@@ -6,6 +6,6 @@ package littlejava;
 public abstract class SeasoningD {
     @Override
     public String toString() {
-        return this.getClass().getSimpleName()+"{}";
+        return "new " + this.getClass().getSimpleName() + "()";
     }
 }

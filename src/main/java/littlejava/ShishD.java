@@ -17,7 +17,7 @@ public abstract class ShishD {
 
     @Override
     public String toString() {
-        return this.getClass().getSimpleName() + 
+        return "new " + this.getClass().getSimpleName() + 
             (s == null ? "()" : "(" + s + ")");
     }
 
