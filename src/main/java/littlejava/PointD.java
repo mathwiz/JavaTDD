@@ -1,5 +1,7 @@
 package littlejava;
 
+import static littlejava.Helpers.*;
+
 /**
  * Created by Yohan on 1/15/14.
  */
@@ -38,20 +40,20 @@ public abstract class PointD {
 
     @Override
     public String toString() {
-        return "PointD{" +
-                "x=" + x +
-                ", y=" + y +
-                '}';
+        return "new " +  this.getClass().getSimpleName() + 
+                "(" + x +
+                ", " + y +
+                ")";
     }
 
     public static void main(String[] args) {
         PointD pt1 = new CartesianPt(3,4);
-        System.out.println(pt1 + " distance to origin " + pt1.distanceToO());
+        println(pt1 + ", distance to origin " + pt1.distanceToO());
         PointD pt2 = new CartesianPt(5,5);
-        System.out.println(pt2 + " distance to origin " + pt2.distanceToO());
-        System.out.println(pt1 + " is closer to origin than " + pt2 + " : " + pt1.closerToO(pt2));
+        println(pt2 + ", distance to origin " + pt2.distanceToO());
+        println(pt1 + ", is closer to origin than " + pt2 + " : " + pt1.closerToO(pt2));
         ManhattanPt pt3 = new ManhattanPt(3, 4);
-        System.out.println(pt3 + " distance to origin " + pt3.distanceToO());
-        System.out.println(pt3 + " is closer to origin than " + pt1 + " : " + pt3.closerToO(pt1));
+        println(pt3 + ", distance to origin " + pt3.distanceToO());
+        println(pt3 + ", is closer to origin than " + pt1 + " : " + pt3.closerToO(pt1));
     }
 }

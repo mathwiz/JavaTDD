@@ -12,14 +12,6 @@ public class ManhattanPt extends PointD {
     }
 
     @Override
-    public String toString() {
-        return "ManhattanPt{" +
-                "x=" + x +
-                ", y=" + y +
-                '}';
-    }
-
-    @Override
     public int distanceToO() {
         return distanceTo(ORIGIN);
     }

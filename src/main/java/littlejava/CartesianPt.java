@@ -12,14 +12,6 @@ public class CartesianPt extends PointD {
     }
 
     @Override
-    public String toString() {
-        return "CartesianPt{" +
-                "x=" + x +
-                ", y=" + y +
-                '}';
-    }
-
-    @Override
     public int distanceToO() {
         return distanceTo(ORIGIN);
     }
