@@ -13,6 +13,10 @@ public abstract class Helpers {
         out.println(o);
     }        
 
+    public static void printf(String format, Object... args) {
+        out.printf(format, args);
+    }        
+
     public static String[] parseArg(String arg, String delimiter) {
         return arg.split(delimiter);
     }
@@ -20,7 +24,7 @@ public abstract class Helpers {
     public static void main(String[] args) {
         String[] parsed = parseArg(args[0], ":");
         for(String elem : parsed) {
-            println(elem);
+            printf("as String: %s \n", elem);
         }
     }
 }
