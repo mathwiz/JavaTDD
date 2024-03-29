@@ -23,8 +23,9 @@ public abstract class Helpers {
 
     public static void main(String[] args) {
         String[] parsed = parseArg(args[0], ":");
+        int i = 0;
         for(String elem : parsed) {
-            printf("as String: %s \n", elem);
+            printf("Arg %d as String: %s \n", ++i, elem);
         }
     }
 }
