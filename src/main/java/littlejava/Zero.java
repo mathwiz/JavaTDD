@@ -6,7 +6,7 @@ package littlejava;
 public class Zero extends NumD {
     @Override
     public String toString() {
-        return "Zero{}";
+        return "new Zero()";
     }
 
     @Override

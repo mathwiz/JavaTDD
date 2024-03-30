@@ -14,10 +14,8 @@ public class Top extends PieD {
 
     @Override
     public String toString() {
-        return "Top{" +
-                "t=" + t +
-                ",\nr=" + r +
-                "}";
+        return "new " + this.getClass().getSimpleName() +
+               String.format("(%s, %s)", t, r);
     }
 
     @Override

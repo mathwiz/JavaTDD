@@ -12,9 +12,9 @@ public class OneMoreThan extends NumD {
 
     @Override
     public String toString() {
-        return "OneMoreThan{" +
-                "predecessor=" + predecessor +
-                '}';
+        NumD p = predecessor;
+        return "new " + this.getClass().getSimpleName() +
+                (p == null ? "()" : "(" + p + ")");
     }
 
     @Override
