@@ -10,9 +10,4 @@ public abstract class LayerD {
     public String toString() {
         return "new " + this.getClass().getSimpleName() + "()";
     }
-
-    public static void main(String[] args) {
-        LayerD it =  new Base(new Zero());
-        println(it);
-    }
 }
