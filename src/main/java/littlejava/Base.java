@@ -24,6 +24,8 @@ public class Base extends LayerD {
         println(it);
         it = new Base(new Salt());
         println(it);
+        it = new Base(5);
+        println(it);
     }
 
 }
