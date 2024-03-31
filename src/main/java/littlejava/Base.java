@@ -26,6 +26,8 @@ public class Base extends LayerD {
         println(it);
         it = new Base(5);
         println(it);
+        it = new Base(false);
+        println(it);
     }
 
 }
