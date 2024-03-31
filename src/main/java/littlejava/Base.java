@@ -12,8 +12,8 @@ public class Base extends LayerD {
 
     @Override
     public String toString() {
-        return "Base{" +
-                "o=" + o +
-                '}';
+        return "new " + this.getClass().getSimpleName() +
+                (o == null ? "()" : "(" + o + ")");
     }
+
 }

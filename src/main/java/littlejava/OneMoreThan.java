@@ -29,9 +29,11 @@ public class OneMoreThan extends NumD {
     }
 
     public static void main(String[] args) {
-        NumD num = new OneMoreThan(
-                                   new OneMoreThan(
-                                                   new Zero()));
+        NumD num = new Zero();
+        int n = 4;
+        for(int i=0; i<n; i++) { 
+            num = new OneMoreThan(num);
+        }
         println("OneMOreThan");
         println(num);
     }

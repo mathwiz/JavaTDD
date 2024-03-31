@@ -10,10 +10,11 @@ public class Slice extends LayerD {
         this.l = l;
     }
 
+
     @Override
     public String toString() {
-        return "Slice{" +
-                "l=" + l +
-                '}';
+        return "new " + this.getClass().getSimpleName() +
+                (l == null ? "()" : "(" + l + ")");
     }
+
 }
