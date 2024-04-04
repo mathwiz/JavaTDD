@@ -40,10 +40,8 @@ public abstract class PointD {
 
     @Override
     public String toString() {
-        return "new " +  this.getClass().getSimpleName() + 
-                "(" + x +
-                ", " + y +
-                ")";
+        return "new " +  this.getClass().getSimpleName() +
+            "(" + x + ", " + y + ")";
     }
 
     public static void main(String[] args) {
