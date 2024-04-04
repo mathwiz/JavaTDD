@@ -1,5 +1,7 @@
 package littlejava;
 
+import static littlejava.Helpers.*;
+
 /**
  * Created by Yohan on 1/15/14.
  */
@@ -18,6 +20,15 @@ public class CartesianPt extends PointD {
 
     @Override
     public int distanceTo(PointD point) {
-        return (int)Math.sqrt(Math.pow(x-point.x, 2) + Math.pow(y-point.y, 2));
+        return (int)Math.sqrt(Math.pow(x - point.x, 2) + Math.pow(y - point.y, 2));
     }
+
+
+    public static void main(String[] args) {
+        PointD pt1 = new CartesianPt(6,9);
+        println(pt1 + ", distance to origin " + pt1.distanceToO());
+        PointD pt2 = new CartesianPt(16,16);
+        println(pt2 + ", distance to origin " + pt2.distanceToO());
+    }
+
 }
