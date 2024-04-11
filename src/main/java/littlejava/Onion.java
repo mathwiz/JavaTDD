@@ -22,6 +22,7 @@ public class Onion extends ShishD {
     }
 
     public static void main(String[] args) {
-        printf("onlyOnions() is: %s\n", new Onion(new Onion(new Skewer())).onlyOnions());
+        ShishD shish = new Onion(new Onion(new Skewer()));
+        printf("onlyOnions() for %s is: %s\n", shish, shish.onlyOnions());
     }
 }
