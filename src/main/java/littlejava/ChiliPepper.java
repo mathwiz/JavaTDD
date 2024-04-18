@@ -4,7 +4,6 @@ package littlejava;
  * Created by Yohan on 1/26/14.
  */
 public class ChiliPepper extends KebabD {
-    KebabD k;
 
     public ChiliPepper(KebabD k) {
         this.k = k;
@@ -20,10 +19,4 @@ public class ChiliPepper extends KebabD {
         return k.whatHolder();
     }
 
-    @Override
-    public String toString() {
-        return "ChiliPepper{" +
-                "k=" + k +
-                '}';
-    }
 }

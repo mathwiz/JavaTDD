@@ -4,7 +4,6 @@ package littlejava;
  * Created by Yohan on 1/19/14.
  */
 public class Shrimp extends KebabD {
-    KebabD k;
 
     public Shrimp(KebabD k) {
         this.k = k;
@@ -20,10 +19,4 @@ public class Shrimp extends KebabD {
         return k.whatHolder();
     }
 
-    @Override
-    public String toString() {
-        return "Shrimp{" +
-                "k=" + k +
-                '}';
-    }
 }

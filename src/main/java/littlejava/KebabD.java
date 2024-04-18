@@ -1,12 +1,22 @@
 package littlejava;
 
+import static littlejava.Helpers.*;
+
 /**
  * Created by Yohan on 1/19/14.
  */
 public abstract class KebabD {
+    protected KebabD k;
+
     public abstract boolean isVeggie();
 
     public abstract Object whatHolder();
+
+    @Override
+    public String toString() {
+        return "new " + this.getClass().getSimpleName() + 
+            (k == null ? "()" : "(" + k + ")");
+    }
 
     public static void main(String[] args) {
         KebabD kebab =
@@ -16,8 +26,8 @@ public abstract class KebabD {
                 new Radish(
                 new Holder(
                 new Dagger())))));
-        System.out.println(kebab);
-        System.out.println(" is veggie " + kebab.isVeggie());
-        System.out.println(" has holder " + kebab.whatHolder());
+        println(kebab);
+        println("isVeggie() " + kebab.isVeggie());
+        println("whatHolder() " + kebab.whatHolder());
     }
 }

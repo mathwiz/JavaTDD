@@ -22,8 +22,8 @@ public class Holder extends KebabD {
 
     @Override
     public String toString() {
-        return "Holder{" +
-                "o=" + o +
-                '}';
+        return "new " + this.getClass().getSimpleName() + 
+            (o == null ? "()" : "(" + o + ")");
     }
+
 }

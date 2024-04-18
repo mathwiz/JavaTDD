@@ -6,6 +6,6 @@ package littlejava;
 public abstract class PlateD {
     @Override
     public String toString() {
-        return this.getClass().getSimpleName()+"{}";
+        return this.getClass().getSimpleName()+"()";
     }
 }
