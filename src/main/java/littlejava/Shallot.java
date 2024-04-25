@@ -25,5 +25,6 @@ public class Shallot extends KebabD {
         KebabD it = new Shallot(new Radish(new Holder(23)));
         println( it );
         printf("isVeggie: %s\n", it.isVeggie() );
+        printf("whatHolder: %s\n", it.whatHolder() );
     }
 }
