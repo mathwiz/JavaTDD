@@ -1,5 +1,7 @@
 package littlejava;
 
+import static littlejava.Helpers.*;
+
 /**
  * Created by Yohan on 1/19/14.
  */
@@ -26,4 +28,10 @@ public class Holder extends KebabD {
             (o == null ? "()" : "(" + o + ")");
     }
 
+
+    public static void main(String[] args) {
+        KebabD it = new Shallot(new Radish(new Holder(new OneMoreThan(new Zero()))));
+        println(it);
+        printf("isVeggie: %s\n", it.isVeggie());
+    }
 }
