@@ -22,7 +22,7 @@ public class Shallot extends KebabD {
     }
 
     public static void main(String[] args) {
-        KebabD it = new Shallot(new Radish(new Holder(new Dagger())));
+        KebabD it = new Shallot(new Radish(new Holder(23)));
         println( it );
         printf("isVeggie: %s\n", it.isVeggie() );
     }
