@@ -3,17 +3,16 @@ package littlejava;
 import static littlejava.Helpers.*;
 
 /**
- * Created by Yohan on 1/19/14.
+ * Created by Yohan on 1/26/14.
  */
-public class Shrimp extends KebabD {
-
-    public Shrimp(KebabD k) {
+public class GreenPepper extends KebabD {
+    public GreenPepper(KebabD k) {
         this.k = k;
     }
 
     @Override
     public boolean isVeggie() {
-        return false;
+        return k.isVeggie();
     }
 
     @Override
@@ -22,7 +21,7 @@ public class Shrimp extends KebabD {
     }
 
     public static void main(String[] args) {
-        KebabD it = new Shrimp(new Holder(new Zero()));
+        KebabD it = new GreenPepper(new Shrimp(new Holder(42)));
         println(it);
         printf("isVeggie: %s\n", it.isVeggie());
         printf("whatHolder: %s\n", it.whatHolder());

@@ -32,6 +32,6 @@ public class Holder extends KebabD {
     public static void main(String[] args) {
         KebabD it = new Shallot(new Radish(new Holder(new OneMoreThan(new Zero()))));
         println(it);
-        printf("isVeggie: %s\n", it.isVeggie());
+        printf("whatHolder: %s\n", it.whatHolder());
     }
 }

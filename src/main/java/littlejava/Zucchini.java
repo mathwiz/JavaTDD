@@ -1,5 +1,7 @@
 package littlejava;
 
+import static littlejava.Helpers.*;
+
 /**
  * Created by Yohan on 1/26/14.
  */
@@ -16,6 +18,13 @@ public class Zucchini extends KebabD {
     @Override
     public Object whatHolder() {
         return k.whatHolder();
+    }
+
+    public static void main(String[] args) {
+        KebabD it = new Zucchini(new Holder(52));
+        println(it);
+        printf("isVeggie: %s\n", it.isVeggie());
+        printf("whatHolder: %s\n", it.whatHolder());
     }
 
 }
