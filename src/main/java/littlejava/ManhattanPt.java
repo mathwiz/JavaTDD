@@ -29,6 +29,7 @@ public class ManhattanPt extends PointD {
 
         printf("Distance from %s to %s: %s\n", a, ManhattanPt.ORIGIN, a.distanceTo(ManhattanPt.ORIGIN));
         printf("Distance from %s to %s: %s\n", b, ManhattanPt.ORIGIN, b.distanceTo(ManhattanPt.ORIGIN));
-        printf("%s is closer to origin than %s: %s", a, b, a.closerToO(b));
+        printf("%s is closer to origin than %s: %s\n", a, b, a.closerToO(b));
+        printf("%s is closer to origin than %s: %s\n", b, a, b.closerToO(a));
     }
 }

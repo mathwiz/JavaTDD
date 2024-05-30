@@ -20,7 +20,7 @@ public class CartesianPt extends PointD {
 
     @Override
     public int distanceTo(PointD point) {
-        return (int)Math.sqrt(Math.pow(x - point.x, 2) + Math.pow(y - point.y, 2));
+        return (int) Math.sqrt(Math.pow(x - point.x, 2) + Math.pow(y - point.y, 2));
     }
 
     public static void main(String[] args) {
@@ -28,7 +28,10 @@ public class CartesianPt extends PointD {
         println(pt1 + ", distance to origin " + pt1.distanceToO());
         PointD pt2 = new CartesianPt(12,5);
         println(pt2 + ", distance to origin " + pt2.distanceToO());
-        printf("%s is closer to origin than %s: %s", pt1, pt2, pt1.closerToO(pt2));
+        printf("%s is closer to origin than %s: %s\n", pt1, pt2, pt1.closerToO(pt2));
+        printf("%s is closer to origin than %s: %s\n", pt2, pt1, pt2.closerToO(pt1));
+        pt2 = new ManhattanPt(1,5);
+        printf("%s is closer to origin than %s: %s\n", pt1, pt2, pt1.closerToO(pt2));
     }
 
 }
