@@ -33,4 +33,14 @@ public class Bot extends PieD {
     public boolean equals(Object o) {
         return o instanceof Bot;
     }
+
+    public static void main(String[] args) {
+        PieD p = new Top(new SalmonFish(),
+                         new Top(new AnchovyFish(),
+                                 new Top(new TunaFish(),
+                                         new Top(new AnchovyFish(), new Bot()))))
+            .remA();
+        System.out.println(p);
+    }
+
 }
