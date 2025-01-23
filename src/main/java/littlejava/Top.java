@@ -62,4 +62,15 @@ public class Top extends PieD {
         result = 31 * result + (r != null ? r.hashCode() : 0);
         return result;
     }
+
+
+    public static void main(String[] args) {
+        PieD p = new Top(new TunaFish(),
+                         new Top(42,
+                                 new Top(new AnchovyFish(),
+                                         new Top(5, new Bot()))))
+            ;
+        System.out.println(p);
+    }
+
 }
