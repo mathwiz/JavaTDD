@@ -17,6 +17,14 @@ public class RemFishV {
     }
 
     public static void main(String[] args) {
+        System.out.println("Example 1");
+        PieD x = new Top(new AnchovyFish(), new Bot());
+        System.out.println("Before");
+        System.out.println(x);
+        System.out.println("After");
+        System.out.println(x.remFish(new AnchovyFish()));
+
+        System.out.println("Example 2");
         PieD p =
                 new Top(new SalmonFish(),
                         new Top(new AnchovyFish(),
