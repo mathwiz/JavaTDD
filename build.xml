@@ -17,6 +17,7 @@
           <echo>${ant.project.name}</echo>
           <echo>${junit.jar}</echo>
           <echo>${hamcrest.jar}</echo>
+          <echo>${src.dir}</echo>
         </target>
 
         <target name="exec-class">

@@ -9,4 +9,9 @@ public abstract class FishD {
     public String toString() {
         return this.getClass().getSimpleName() + "";
     }
+
+    public static void main(String[] args) {
+        FishD x = null;
+        System.out.println(x);
+    }
 }
