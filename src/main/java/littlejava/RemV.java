@@ -28,7 +28,8 @@ public class RemV {
                                                                         new Bot()))))))
                 );
         System.out.println("Before\n" + p);
-        PieD after = p.rem(new RemV(), new TunaFish()).rem(new RemV(), new Integer(42));
+        // PieD after = p.rem(new RemV(), new TunaFish()).rem(new RemV(), new Integer(42));
+        PieD after = p.rem(new TunaFish()).rem(new Integer(42));
         System.out.println("After\n" + after);
     }
 

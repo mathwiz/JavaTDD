@@ -10,6 +10,8 @@ public abstract class PieD {
 
     protected RemIntV riFn = new RemIntV();
 
+    protected RemV remFn = new RemV();
+
     @Deprecated
     public abstract PieD remA();
 
@@ -19,7 +21,10 @@ public abstract class PieD {
     @Deprecated
     public abstract PieD remInt(Integer i);
 
+    @Deprecated
     public abstract PieD rem(RemV remV, Object o);
+
+    public abstract PieD rem(Object o);
 
     public abstract PieD subst(SubstV substV,Object n, Object o);
 

@@ -19,9 +19,14 @@ public class Bot extends PieD {
         return riFn.forBot(i);
     }
 
-    @Override
-    public PieD rem(RemV rFn,Object o) {
+    @Deprecated
+    public PieD rem(RemV rFn, Object o) {
         return rFn.forBot(o);
+    }
+
+    @Override
+    public PieD rem(Object o) {
+        return remFn.forBot(o);
     }
 
     @Override

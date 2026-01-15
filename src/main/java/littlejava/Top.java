@@ -28,9 +28,14 @@ public class Top extends PieD {
         return rfFn.forTop(t, r, fishD);
     }
 
-    @Override
+    @Deprecated
     public PieD rem(RemV rFn, Object o) {
         return rFn.forTop(t, r, o);
+    }
+
+    @Override
+    public PieD rem(Object o) {
+        return remFn.forTop(t, r, o);
     }
 
     @Override
