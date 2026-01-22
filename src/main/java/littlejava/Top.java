@@ -70,10 +70,10 @@ public class Top extends PieD {
 
 
     public static void main(String[] args) {
-        PieD p = new Top(new TunaFish(),
-                         new Top(42,
-                                 new Top(new AnchovyFish(),
-                                         new Top(5, new Bot()))))
+        PieD p = new Top(new AnchovyFish(),
+                         new Top(3,
+                                 new Top(new Zero(),
+                                         new Bot()))).rem(new Zero())
             ;
         System.out.println(p);
     }
